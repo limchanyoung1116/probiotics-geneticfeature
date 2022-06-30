@@ -26,7 +26,9 @@
 - 식약처 고시형 균주인 9속 19종 probiotics를 target으로 함.
 - 19종 균주와 다른 균주를 구분지을수 있는 genetic marker를 찾는것이 목표
 <br/>
+
 ## 2. probiotics 균주 유전자 데이터 수집
+
 <br/>
 
 |속|유전체수|종|유전체수|
@@ -36,6 +38,12 @@
 |||L.delbrueckii ssp. bulgaricus|40|
 |||L.helveticus|155|
 |Lacticaseibacillus|526|L.casei|29|
+|||L.paracasei|209|
+|||L.rhammnosus|208|
+|Limosilactobacillus|510|L.fermentum|101|
+|||L.reuteri|316|
+|Lactiplantibacillus|767|L.plantarum|663|
+|Ligilactobacillus|373|L.salivarius|191|
 
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집 
