@@ -47,6 +47,11 @@
 |Lactococcus|412|L.lactis|201|
 |Streptococcus|284(17259)|S.thermophilus|179|
 |Bifidobacterium|1554|B.bifidum|116|
+|||B.breve|158|
+|||B.longum|524|
+|||B.animalis ssp. lactis|199|
+|Enterococcus|5863|E.faecium|2722|
+|||E.faecalis|2084|
 
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집 
