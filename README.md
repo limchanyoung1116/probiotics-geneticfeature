@@ -70,5 +70,21 @@
 ## 3. probiotics marker kmer 찾기
 ### 3-1. tool : jellyfish
 <br/>
-  
-1. 
+
+(여기에 젤리피쉬 링크 달예정)
+
+1. jellyfish란?
+2. 사용한 jellyfish command
+3. jellyfish를 활용한 연속적인 k-mer counting
+
+<br/><br/><br/>
+
+### 3-2. tool : phenotypeseeker
+<br/>
+
+(여기에 phenotypeseeker 링크 달예정)
+
+1. phenotypeseeker란?
+2. 사용한 phenotypeseeker command
+3. phenotypeseeker의 단점
+ 
