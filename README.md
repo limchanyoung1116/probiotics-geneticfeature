@@ -94,9 +94,13 @@
 ### 4-1. Neptune
 <br/>
 1. Neptune이란?
+  
     - bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
-    - inclusion group과 exclusion group을 설정하고, inclusion group들에서는 존재하지만
-      exclusion group에서는 존재하지 않는 
+    - inclusion group과 exclusion group을 설정
+    - inclusion group들에서는 존재하지만 exclusion group에서는 존재하지 않는 genomic locus를 찾는다
+    - k-mer를 기준으로 일치도를 판단하며 blastn을 이용해 두 서열을 비교한다.
+    - Neptune github(https://github.com/phac-nml/neptune)
+    - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
   
 2. 사용한 Neptune command
  
