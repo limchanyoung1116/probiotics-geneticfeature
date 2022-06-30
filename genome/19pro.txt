@@ -1,0 +1,36 @@
+Lactobacillus
+Lactobacillus acidophilus	1579
+Lactobacillus gasseri	1596
+Lactobacillus delbrueckii subsp. bulgaricus	1585
+Lactobacillus helveticus	1587
+
+Limosilactobacillus
+Limosilactobacillus fermentum	1613
+Limosilactobacillus reuteri	1598
+
+Lacticaseibacillus
+Lacticaseibacillus casei	1582
+Lacticaseibacillus paracasei	1597
+Lacticaseibacillus rhamnosus	47715
+
+Lactiplantibacillus
+Lactiplantibacillus plantarum	1590
+
+Ligilactobacillus
+Ligilactobacillus salivarius	1624
+
+Lactococcus
+Lactococcus lactis	1358
+
+Streptococcus
+Streptococcus thermophilus	1308
+
+Bifidobacterium
+Bifidobacterium bifidum	1681
+Bifidobacterium breve	1685
+Bifidobacterium longum	216816
+Bifidobacterium animalis supsp. lactis	302911
+
+Enterococcus
+Enterococcus faecium	1352
+Enterococcus faecalis	1351

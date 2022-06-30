@@ -1,0 +1,32 @@
+Genus		n of Genomes
+Lactobacillus		1183
+Lacticaseibacillus	484
+Limosilactobacillus	509
+Lactiplantibacillus	763
+Ligilactobacillus	373
+Lactococcus		381
+Streptococcus		16702
+Bifidobacterium		1490
+Enterococcus		5861
+None			0
+sum			27746
+
+Lactobacillus acidophilus	59
+Lactobacillus gasseri	61
+Lactobacillus delbrueckii subsp. bulgaricus	33
+Lactobacillus helveticus	155
+Limosilactobacillus fermentum	101
+Limosilactobacillus reuteri	315
+Lacticaseibacillus casei	29
+Lacticaseibacillus paracasei	199
+Lacticaseibacillus rhamnosus	208
+Lactiplantibacillus plantarum	659
+Ligilactobacillus salivarius	191
+Lactococcus lactis	181
+Streptococcus thermophilus	179
+Bifidobacterium bifidum	116
+Bifidobacterium breve	158
+Bifidobacterium longum	498
+Bifidobacterium animalis supsp. lactis	37
+Enterococcus faecium	2722
+Enterococcus faecalis	2084
