@@ -32,8 +32,8 @@
 <br/>
 
 |속|유전체수|종|유전체수|
-|:-:|--:|:--:|--:|
-|Lactobacillus|1203|L.acidophilus|59|
+|:-|--:|:--|--:|
+| <r4> Lactobacillus|1203|L.acidophilus|59|
 |||L.gasseri|61|
 |||L.delbrueckii ssp. bulgaricus|40|
 |||L.helveticus|155|
@@ -44,6 +44,9 @@
 |||L.reuteri|316|
 |Lactiplantibacillus|767|L.plantarum|663|
 |Ligilactobacillus|373|L.salivarius|191|
+|Lactococcus|412|L.lactis|201|
+|Streptococcus|284(17259)|S.thermophilus|179|
+|Bifidobacterium|1554|B.bifidum|116|
 
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집 
