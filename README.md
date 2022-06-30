@@ -74,10 +74,10 @@
 (여기에 젤리피쉬 링크 달예정)
 
 1. jellyfish란?
+    - 주어진 두 genome에서
 2. 사용한 jellyfish command
 3. jellyfish를 활용한 연속적인 k-mer counting
-
-<br/><br/><br/>
+<br/><br/>
 
 ### 3-2. tool : phenotypeseeker
 <br/>
@@ -87,4 +87,16 @@
 1. phenotypeseeker란?
 2. 사용한 phenotypeseeker command
 3. phenotypeseeker의 단점
+  
+<br/><br/>
+
+## 4. probiotics marker 유전자 찾기
+### 4-1. Neptune
+<br/>
+1. Neptune이란?
+    - bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
+    - inclusion group과 exclusion group을 설정하고, inclusion group들에서는 존재하지만
+      exclusion group에서는 존재하지 않는 
+  
+2. 사용한 Neptune command
  
