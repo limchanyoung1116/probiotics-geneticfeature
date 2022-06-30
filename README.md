@@ -86,7 +86,7 @@
 
 1. phenotypeseeker란?
 2. 사용한 phenotypeseeker command
-3. phenotypeseeker의 단점
+3. phenotypeseeker 결과
   
 <br/><br/>
 
@@ -103,4 +103,8 @@
     - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
   
 2. 사용한 Neptune command
- 
+
+    - Neptune --inclusion/
+
+3. Neptune 결과
+  
