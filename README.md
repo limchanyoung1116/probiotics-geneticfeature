@@ -33,6 +33,7 @@
 - NCBI taxonomy ftp(https://ftp.ncbi.nih.gov/pub/taxonomy/). 2022/05/16 다운로드
 
 <br/>
+
 |속|유전체수|종|유전체수|
 |:-|--:|:--|--:|
 | <r4> Lactobacillus|1203|L.acidophilus|59|
@@ -56,10 +57,11 @@
 |||E.faecalis|2084|
 
 <br/>
-1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
 
+1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
 2. Streptococcus를 제외한 8속에 대해서, NCBI taxid를 기준으로  
-  8genus의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집  
-    
-  - Streptococcus에 대해서는 고시형 균주에 속하는 S.thermophilus만 모든 유전체를 수집하고,
+  8genus의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
+    - Streptococcus에 대해서는 고시형 균주에 속하는 S.thermophilus만 모든 유전체를 수집하고,
       나머지 종들은 representative genome만 수집
+3. 총 11,326개의 genome data를 수집
+
