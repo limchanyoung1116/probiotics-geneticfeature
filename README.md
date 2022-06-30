@@ -4,11 +4,11 @@
 ----------------------------
 ### 1. 연구의 목적과 배경
 ### 2. probiotics 균주 유전자 데이터 수집
-### 3. 특징적인 k-mer 찾기
+### 3. probiotics marker k-mer 찾기
 
-#### 3-1. tool : Phenotypeseeker
-#### 3-2. tool : jellyfish
-### 4. 특징적인 유전자 찾기
+#### 3-1. tool : jellyfish
+#### 3-2. tool : phenotypeseeker
+### 4. probiotics marker 유전자 찾기
 
 #### 4-1. tool : Neptune
 #### 4-2. tool : Scoary
@@ -64,4 +64,11 @@
     - Streptococcus에 대해서는 고시형 균주에 속하는 S.thermophilus만 모든 유전체를 수집하고,
       나머지 종들은 representative genome만 수집
 3. 총 11,326개의 genome data를 수집
+<br/>
+<br/>
 
+## 3. probiotics marker kmer 찾기
+### 3-1. tool : jellyfish
+<br/>
+  
+1. 
