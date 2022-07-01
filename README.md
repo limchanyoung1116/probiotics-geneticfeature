@@ -147,3 +147,20 @@
     - k = 23 에서 결과가 출력되지 않음.
     - Neptune의 특성상, genome의 수가 늘어날수록 출력되는 contig가 적어질 수밖에 없음.
       - 따라서 Neptune은 100개 이하의 genome set에서만 사용하기로 결론지음.
+<br/>
+
+### 4-2. Scoary
+<br/>
+
+1. Scoary란?
+    - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
+    - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
+    - Gene presence/absence file은 Roary프로그램으로 만듬.(https://sanger-pathogens.github.io/Roary/)
+    - Scoary github(https://github.com/AdmiralenOla/Scoary)
+
+2. Scoary genome set
+    - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
+      - Streptococcus thermophilus 6genome은 probiotics 표현형 1, S. non thermophilus 20genome은 0
+      - 26개의 genome에 대해 Roary에서 gene presence.csv 파일 생성
+ 
+3. Scoary 
