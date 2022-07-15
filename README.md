@@ -38,7 +38,7 @@
 
 ## 2. [probiotics 균주 유전자 데이터 수집](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
 
-##### 수집 범위
+#### 수집 범위
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
 2. 총 9속에 대해서 NCBI taxid를 기준으로 함  
@@ -46,7 +46,7 @@
     - _Streptococcus_ 에 대해서는 고시형 균주에 속하는 _S.thermophilus_ 만 모든 유전체를 수집
     - 다른 _Streptococcus_ species들은 representative genome만 수집
 
-##### 수집 결과
+#### 수집 결과
 
 3. 총 11,489개의 genome data를 수집
 
@@ -121,3 +121,9 @@
 <br/>
 
 ### 6-1. tool : pyani
+<br/> 
+
+#### 1) pyani란?
+
+ - 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
+ - 
