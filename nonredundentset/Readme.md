@@ -71,7 +71,7 @@ Pyani/clustering
 #### 2. clustering 결과
 <br/>
 
-||score|Cluster algorithm|Cluster parameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
+|try|score|Cluster algorithm|Cluster parameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
 |:-|-:|-:-|:-|-:|-:|-:|-:|-:|
 |whole genomes|||373|505|767|412|510|
 |Cluster try 01|0.95|Louvain|default without self edge|18|27|17|26|30|
