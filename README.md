@@ -120,10 +120,9 @@
  - 중복되는 genome들을 제외시키면서 총 genome의 수를 줄이고 효율성을 높일 필요성이 있음
 <br/>
 
-### 6-1. tool : pyani
+### 6-1. tool : Pyani
 <br/> 
-
-#### 1) pyani란?
-
- - 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
- - 
+ - pyani는 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
+ - 수집한 9속의 genome중, 이미 representative로 압축된 Streptococcus를 제외한 8속에 대해 속별로 pyani 진행
+ - pyani의 output을 시각화하는 방법으로 R의 pheatmap package를 선택
+ 
