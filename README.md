@@ -122,4 +122,4 @@
  - 중복되는 genome들을 제외시키면서 총 genome의 수를 줄이고 효율성을 높일 필요성이 있음
 <br/>
 
-#### 6-1. tool : pyani
+### 6-1. tool : pyani
