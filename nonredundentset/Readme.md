@@ -15,14 +15,14 @@ Pyani/clustering
 
 #### 2. Pyani set
 
-  - 9속 중에서 이미 representative genome만을 남긴 Streptococcus를 제외한 8속에 대해 속 단위로 진행
-  - genome 수 1000개를 기준으로 blastn과 murmur를 선택
-    - blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
-    - murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
-  - blastn 선택 genome
-    - Ligilactobacillus, Lactococcus, Lacticaseibacillus, Limosilactobacillus, Lactiplantibacillus 5속
-  - murmur 선택 genome
-    - Lactobacillus, Bifidobacterium, Enterococcus 3속
+    - 9속 중에서 이미 representative genome만을 남긴 Streptococcus를 제외한 8속에 대해 속 단위로 진행
+    - genome 수 1000개를 기준으로 blastn과 murmur를 선택
+        - blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
+        - murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
+    - blastn 선택 genome
+        - Ligilactobacillus, Lactococcus, Lacticaseibacillus, Limosilactobacillus, Lactiplantibacillus 5속
+    - murmur 선택 genome
+        - Lactobacillus, Bifidobacterium, Enterococcus 3속
 
 #### 3. Pyani command
 
