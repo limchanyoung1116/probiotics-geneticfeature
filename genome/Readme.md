@@ -24,10 +24,10 @@
 |_Streptococcus_|284(17259)|_S.thermophilus_|179|
 |_Bifidobacterium_|1554|_B.bifidum_|116|
 |||_B.breve_|158|
-|||_B.longum_|24|
-|||B.animalis ssp. lactis|199|
-|Enterococcus|5863|E.faecium|2722|
-|||E.faecalis|2084|
+|||_B.longum_|524|
+|||_B.animalis ssp. lactis_|199|
+|_Enterococcus_|5863|_E.faecium_|2722|
+|||_E.faecalis_|2084|
 
 <br/>
 
