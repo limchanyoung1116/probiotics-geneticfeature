@@ -6,16 +6,16 @@
 ### 2. probiotics 균주 유전자 데이터 수집
 ### 3. probiotics ingroup/outgroup marker kmer 찾기
 
-  ####      3-1. tool : jellyfish
-  ####      3-2. tool : phenotypeseeker
+####  3-1. tool : jellyfish
+####  3-2. tool : phenotypeseeker
 ### 4. probiotics ingroup/outgroup marker 유전자 찾기
 
-  ####      4-1. tool : Neptune
-  ####      4-2. tool : Scoary
+#### 4-1. tool : Neptune
+#### 4-2. tool : Scoary
 ### 5. non redundant genome set 만들기
 
-  ####      5-1. tool : pyani
-  ####      5-2. tool : network clustring algorithms
+#### 5-1. tool : pyani
+#### 5-2. tool : network clustring algorithms
 
 <br/>  
   
