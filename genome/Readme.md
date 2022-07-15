@@ -2,12 +2,14 @@
 
 
 #### NCBI taxonomy ftp(https://ftp.ncbi.nih.gov/pub/taxonomy/). 2022/05/16 다운로드
+#### 고시형 균주 19종이 속하는 9속의 bacteria들의 genome을 모두 수집.
+#### Streptococcus는 genome 수가 16,000개로 너무 많은 비율을 차지하여 다른 기준으로 수집
 
 <br/>
 
 |속|유전체수|종|유전체수|
 |:-|--:|:--|--:|
-| <r4> Lactobacillus|1203|L.acidophilus|59|
+| <r4> _Lactobacillus_|1203|L.acidophilus|59|
 |||L.gasseri|61|
 |||L.delbrueckii ssp. bulgaricus|40|
 |||L.helveticus|155|
@@ -30,8 +32,7 @@
 <br/>
 
 - 총 9속, 11489개 유전체 데이터 수집
-- probiotics 고시형 균주 19종이 9속에 속함
-- Streptococcus는 16,000개 이상의 genome data 중 representative genome과 S.thermophilus genome만을 수집
+- _Streptococcus_는 16,000개 이상의 genome data 중 representative genome과 S.thermophilus genome만을 수집
 - 수집한 genome 중 Enterococcus가 5863개로 50% 이상을 차지했음
 - E.facalis와 E.faecium이 19종 중 가장 높은 비율을 차지했음
   
@@ -48,3 +49,5 @@
 <br/>
 
 #### assembly_summary.txt나 nodes.dmp 파일은 ncbi taxonomy 사이트에서 tar.gz형식으로 다운 가능
+
+이탤릭체, 수집기준, 링크
