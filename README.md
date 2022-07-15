@@ -78,8 +78,7 @@
 ## 4. probiotics marker 유전자 찾기
 <br/>
 
-#### 4-1. tool 선택하기
-<br/>
+### 4-1. tool 선택하기
 1. 여러 개의 genome 상에서 서열이나 유전자들을 비교하는 많은 tool들이 지난 수십년간 개발되었음.
 2. 직접 만들기보다는 기존에 알려진 tool들 중 목적에 맞는 효율적인 tool을 찾고 사용하는 편이 효율적.
 3. 첫번째 tool은 기존의 k-mer를 통한 연구와 연계성을 위해, k-mer 기반 알고리즘인 Neptune을 사용.
@@ -89,8 +88,6 @@
 
 
 ### 4-2. Scoary
-<br/>
-
 1. Scoary란?
     - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
     - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
