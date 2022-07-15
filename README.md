@@ -33,8 +33,6 @@
 
 ## 2. [probiotics 균주 유전자 데이터 수집](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
 
-<br/>
-
 ##### 수집 범위
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
@@ -46,7 +44,6 @@
 ##### 수집 결과
 
 3. 총 11,489개의 genome data를 수집
-<br/>
 <br/>
 
 ## 3. probiotics marker kmer 찾기
