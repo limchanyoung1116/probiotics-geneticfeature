@@ -44,6 +44,7 @@
 ##### 수집 결과
 
 3. 총 11,489개의 genome data를 수집
+
 <br/> <br/>
 
 ## 3. probiotics marker kmer 찾기
