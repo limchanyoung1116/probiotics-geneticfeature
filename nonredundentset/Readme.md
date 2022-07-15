@@ -75,8 +75,23 @@ Pyani/clustering
 |:-|--:|:--|:--|--:|--:|--:|--:|--:|
 |whole genomes||||373|505|767|412|510|
 |Cluster try 01|0.95|Louvain|default without self edge|18|27|17|26|30|
-
-|trial|score|Clusteralgorithm|Clusterparameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
-|:-|-:|-:-|:-|-:|-:|-:|-:|-:|
-|wholegenomes|1|1|1|373|505|767|412|510|
-|Clustertry01|0.95|Louvain|defaultwithoutselfedge|18|27|17|26|30|
+|Cluster try 02|0.95|Leiden|default without self edge|18|27|17|26|30|
+|Cluster try 03|0.95|MCL|default without self edge|18|27|17|NA|NA|
+|Cluster try 04|0.96|Louvain|default without self edge|19|30|18|27|34|
+|Cluster try 05|0.96|Leiden|default without self edge|19|30|18|27|34|
+|Cluster try 06|0.96|MCL|default without self edge|19|30|17|NA|NA|
+|Cluster try 07|0.97|Louvain|default without self edge|22|32|18|29|43|
+|Cluster try 08|0.97|Leiden|default without self edge|22|32|18|29|43|
+|Cluster try 09|0.97|MCL|default without self edge|23|32|19|NA|NA|
+|Cluster try 10|0.98|Louvain|default without self edge|47|44|29|35|91|
+|Cluster try 11|0.98|Leiden|default without self edge|47|44|29|35|91|
+|Cluster try 12|0.98|MCL|default without self edge|NA|44|29|NA|NA|
+|Cluster try 13|0.99|Louvain|default without self edge|121|86|47|94|158|
+|Cluster try 14|0.99|Leiden|default without self edge|121|86|47|94|158|
+|Cluster try 15|0.99|MCL|default without self edge|NA|NA|45|NA|NA|
+|Cluster try 16|0.995|Louvain|default without self edge|144|129|130|163|250|
+|Cluster try 17|0.995|Leiden|default without self edge|144|129|130|163|250|
+|Cluster try 18|0.995|MCL|default without self edge|NA|132|NA|NA|NA|
+|Cluster try 19|0.999|Louvain|default without self edge|207|264|383|265|323|
+|Cluster try 20|0.999|Leiden|default without self edge|207|264|383|265|323|
+|Cluster try 21|0.999|MCL|default without self edge|NA|NA|387|NA|NA|
