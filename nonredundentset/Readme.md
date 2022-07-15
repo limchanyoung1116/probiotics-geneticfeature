@@ -38,7 +38,7 @@ Pyani/clustering
     - Pyani에서 자체적인 시각화 옵션을 제공하지만, 이미지 옵션만을 제공함
       - 행렬을 바꿔 정렬하거나, 더 고해상도의 이미지를 얻거나, identity에 따른 색깔 옵션을 바꾸려면 표를 이용한 가공이 필요
       - tab으로 열을 나누고 enter로 행을 나눈, .tab format의 표를 R의 Pheatmap을 통해 시각화
-    - Pheatmap이란? - [link](https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap)
+    - Pheatmap이란? - [documentation](https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap)
       - heatmap은 주어진 table을 점수에 따라 색깔로 시각화하는 방식임.
       - Pheatmap은 heatmap을 그려주고 유사도에 따라 추정되는 계통도를 그려주는 R의 library임.
     - pheatmap command
