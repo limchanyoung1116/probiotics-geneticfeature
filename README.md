@@ -84,10 +84,12 @@
 3. 첫번째 tool은 기존의 k-mer를 통한 연구와 연계성을 위해, k-mer 기반 알고리즘인 Neptune을 사용.
 4. 두번째 tool은 여러 tool들의 특징을 비교한 논문에서, 가장 적합하다고 생각되는 Scoary를 선택.
  - Scoary 선택 이유
+<br/>
 
+### 4-2. Neptune
+<br/>
 
-
-### 4-2. Scoary
+### 4-3. Scoary
 1. Scoary란?
     - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
     - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
@@ -100,3 +102,24 @@
       - 26개의 genome에 대해 Roary에서 gene presence.csv 파일 생성
  
 3. Scoary 
+
+
+## 5. Genome상에 유전자/서열 mapping하기
+<br/>
+
+### 5-1. Neptune 결과 mapping하기
+<br/>
+
+### 5-2. Scoary 결과 mapping하기
+<br/>
+
+## 6. non redundent set 만들기
+<br/>
+
+##### Non redundent set의 필요성
+ - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
+ - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
+ - 중복되는 genome들을 제외시키면서 총 genome의 수를 줄이고 효율성을 높일 필요성이 있음
+<br/>
+
+#### 6-1. tool : pyani
