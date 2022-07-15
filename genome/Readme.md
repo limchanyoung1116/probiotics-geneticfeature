@@ -3,7 +3,7 @@
 
 #### NCBI taxonomy ftp(https://ftp.ncbi.nih.gov/pub/taxonomy/). 2022/05/16 다운로드
 #### 고시형 균주 19종이 속하는 9속의 bacteria들의 genome을 모두 수집.
-#### _Streptococcus_는 genome 수가 16,000개로 너무 많은 비율을 차지하여 다른 기준으로 수집
+#### _Streptococcus_ 는 genome 수가 16,000개로 너무 많은 비율을 차지하여 다른 기준으로 수집
 
 <br/>
 
