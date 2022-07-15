@@ -121,8 +121,20 @@
 <br/>
 
 ### 6-1. tool : Pyani
-<br/> 
  - pyani는 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
  - 수집한 9속의 genome중, 이미 representative로 압축된 Streptococcus를 제외한 8속에 대해 속별로 pyani 진행
  - pyani의 output을 시각화하는 방법으로 R의 pheatmap package를 선택
+ - pheatmap은 2차원 표에서 색깔의 차이로 genome들 사이의 identity 점수를 시각화해주고, 추정되는 계통도를 각 변에 그려줌
+ <br/>
  
+### 6-2. tool : network clustering algorithm
+#### 사용한 알고리즘
+ - pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
+ - 많은 알고리즘들 중 Leiden, Louvain, MCL을 선택
+
+#### 결과
+ - 세 알고리즘 모두 비슷한 수와 형태의 grouping을 보여줌
+ - MCL은 identity 점수 cut off가 높을 때(0.98이상), 종종 결과를 내지 못함
+ - MCL은 길찾기 기반 알고리즘이기 때문에, 전체 유전체 수에 비해 너무 흩어진 경우 제대로 된 결과를 내지 못하는 것으로 보임
+ - 예상과는 달리, cut off 0.995 에서도 grouping을 통해 genome수를 절반 이하로 줄일 수 있음
+ - 0.99, 0.995, 0.999중 하나를 cut off로 정하기로 
