@@ -86,7 +86,7 @@
  - Scoary 선택 이유
 <br/>
 
-### 4-2. [Neptune](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/Neptune)
+### 4-2. [Neptune](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
 <br/>
 
 ### 4-3. Scoary
