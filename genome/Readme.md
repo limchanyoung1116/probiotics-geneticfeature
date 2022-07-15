@@ -40,7 +40,7 @@
   
 ## 다운로드에 사용한 코드들
 
-#### 1. 9속에 속하는 모든 종, 아종들의 taxid 가져오기 - link(https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome/1.%20taxid)
+#### 1. 9속에 속하는 모든 종, 아종들의 taxid 가져오기 - [link](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome/1.%20taxid)
 #### 2. taxid를 이용해 종, 아종들의 genome들의 URL 가져오기
 #### 3. 9속에 속하는 11,326개 species, subspecies genome 다운로드 코드
 #### 4. 163개 subspecies의 subspecies genome 다운로드 코드
