@@ -22,9 +22,9 @@
 |_Ligilactobacillus_|373|_L.salivarius_|191|
 |_Lactococcus_|412|_L.lactis_|201|
 |_Streptococcus_|284(17259)|_S.thermophilus_|179|
-|Bifidobacterium|1554|B.bifidum|116|
-|||B.breve|158|
-|||B.longum|524|
+|_Bifidobacterium_|1554|_B.bifidum_|116|
+|||_B.breve_|158|
+|||_B.longum_|24|
 |||B.animalis ssp. lactis|199|
 |Enterococcus|5863|E.faecium|2722|
 |||E.faecalis|2084|
@@ -32,9 +32,9 @@
 <br/>
 
 - 총 9속, 11489개 유전체 데이터 수집
-- _Streptococcus_는 16,000개 이상의 genome data 중 representative genome과 S.thermophilus genome만을 수집
-- 수집한 genome 중 Enterococcus가 5863개로 50% 이상을 차지했음
-- E.facalis와 E.faecium이 19종 중 가장 높은 비율을 차지했음
+- _Streptococcus_ 는 16,000개 이상의 genome data 중 representative genome과 _S.thermophilus_ genome만을 수집
+- 수집한 genome 중 _Enterococcus_ 가 5863개로 50% 이상을 차지했음
+- _E.facalis_ 와 _E.faecium_ 이 19종 중 가장 높은 비율을 차지했음
   
 <br/><br/>  
   
