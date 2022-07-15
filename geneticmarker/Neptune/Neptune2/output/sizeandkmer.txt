@@ -1,0 +1,6 @@
+size : minimun length of signiture
+default size : k*4
+ex) k = 19 size = 76
+down : k*3
+up : k*5
+ddown : k*2.5

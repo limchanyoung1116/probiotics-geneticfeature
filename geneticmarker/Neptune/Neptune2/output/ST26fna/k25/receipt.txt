@@ -1,0 +1,56 @@
+==============================================================
+RUN RECEIPT
+==============================================================
+
+-- Command Line -- 
+
+/home/cylim/miniconda3/envs/neptune/bin/neptune-conda --inclusion ./input/ST26fna/inclusion/ --exclusion ./input/ST26fna/exclusion/ --output ./output/ST26fna/k25 -k 25 
+
+-- Files -- 
+
+Inclusion Targets = 
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00005_ST_s0001308_u0001308_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00004_ST_s0001308_u0001308_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00002_ST_s0001308_u0001308_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00003_ST_s0001308_u0001308_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00139_ST_s0001308_u0001308_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00006_ST_s0001308_u0001308_fna.fna
+Exclusion Targets = 
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00174_ST_s0001341_u0001341_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00000_ST_s0001302_u0001302_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00177_ST_s0001348_u0001348_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00176_ST_s0001345_u0001345_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00167_ST_s0001318_u0001318_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00171_ST_s0001335_u0001335_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00162_ST_s0001309_u0001309_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00169_ST_s0001329_u0001329_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00165_ST_s0001313_u0001313_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00175_ST_s0001343_u0001343_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00163_ST_s0001310_u0001310_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00170_ST_s0001333_u0001333_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00001_ST_s0001304_u0001304_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00168_ST_s0001326_u0001326_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00164_ST_s0001311_u0001311_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00173_ST_s0001340_u0001340_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00172_ST_s0001337_u0001337_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00178_ST_s0001349_u0001349_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00166_ST_s0001314_u0001314_fna.fna
+	/home/cylim/projects/lacto/Neptune2/input/ST26fna/exclusion/N00179_ST_s0028037_u0028037_fna.fna
+Reference = None
+Output = 
+	/home/cylim/projects/lacto/Neptune2/output/ST26fna/k25
+
+-- General -- 
+
+k = 25
+SNV Rate = None
+Minimum Inclusion Observations = None
+Minimum Exclusion Observations = None
+Maximum Gap Size = None
+Minimum Signature Size = None
+GC-Content = None
+Filter Length = None
+Filter Percent = None
+k-mer Organization = 3
+Reference Size = None
+

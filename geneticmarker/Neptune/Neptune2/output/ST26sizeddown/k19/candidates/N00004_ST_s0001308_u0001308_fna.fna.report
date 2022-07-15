@@ -1,0 +1,19 @@
+==== Parameterization Report ====
+
+Reference File = /home/cylim/projects/lacto/Neptune2/input/ST26fna/inclusion/N00004_ST_s0001308_u0001308_fna.fna
+Reference Size = 1868018
+GC-Content = 0.39
+
+SNV Rate = 0.01
+
+Inclusion Genomes = 6
+Minimum Inclusion Hits = 2.0
+
+Exclusion Genomes = 20
+Maximum Exclusion Hits = 1
+
+k-mer Size = 19
+k-mer File = /home/cylim/projects/lacto/Neptune2/output/ST26sizeddown/k19/aggregate.kmers
+
+Maximum k-mer Gap Size = 62
+Minimum Signature Size = 48
