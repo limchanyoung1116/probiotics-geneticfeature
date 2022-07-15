@@ -71,9 +71,9 @@ Pyani/clustering
 #### 2. clustering 결과
 <br/>
 
-|trial|score|Cluster algorithm|유전체수|
-|:-|--:|:--|--:|
-| <r4> _Lactobacillus_|1203|_L.acidophilus_|59|
+|trial|score|Cluster algorithm|Cluster parameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
+|:-|--:|:--|:--|--:|--:|--:|--:|--:|
+|Cluster try 01|0.95|Louvain|default without self edge|18|27|17|26|30|
 
 |trial|score|Clusteralgorithm|Clusterparameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
 |:-|-:|-:-|:-|-:|-:|-:|-:|-:|
