@@ -17,29 +17,39 @@ Pyani/clustering
 
     - 9속 중에서 이미 representative genome만을 남긴 Streptococcus를 제외한 8속에 대해 속 단위로 진행
     - genome 수 1000개를 기준으로 blastn과 murmur를 선택
-        - blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
-        - murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
+      - blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
+      - murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
     - blastn 선택 genome
-        - Ligilactobacillus, Lactococcus, Lacticaseibacillus, Limosilactobacillus, Lactiplantibacillus 5속
+      - Ligilactobacillus, Lactococcus, Lacticaseibacillus, Limosilactobacillus, Lactiplantibacillus 5속
     - murmur 선택 genome
-        - Lactobacillus, Bifidobacterium, Enterococcus 3속
+      - Lactobacillus, Bifidobacterium, Enterococcus 3속
 
 #### 3. Pyani command
 
-  - pyani ~ 대신 average_nucleotide_identity.py ~ 를 사용
-    - 최신 버전에서는 pyani command를 사용하나 conda 채널의 버전은 0.2x 버전이므로 pyani command 사용 불가
-  - average_nucleotide_identity.py -i ./inputgenus/Ligilactobacillus -o ./outputgenus/Ligilactobacillus -g -m ANIb --workers 54
-    - -m 옵션은 ANIb, ANIm, 그리고 다른 알고리즘 중에 선택하는 옵션
-    - --workers는 사용할 쓰레드의 수를 지정
-    - -g는 pdf, png 등의 형식으로 pyani 결과를 시각화할지 선택 
+    - pyani ~ 대신 average_nucleotide_identity.py ~ 를 사용
+      - 최신 버전에서는 pyani command를 사용하나 conda 채널의 버전은 0.2x 버전이므로 pyani command 사용 불가
+    - average_nucleotide_identity.py -i ./inputgenus/Ligilactobacillus -o ./outputgenus/Ligilactobacillus -g -m ANIb --workers 54
+      - -m 옵션은 ANIb, ANIm, 그리고 다른 알고리즘 중에 선택하는 옵션
+      - --workers는 사용할 쓰레드의 수를 지정
+      - -g는 pdf, png 등의 형식으로 pyani 결과를 시각화할지 선택 
 
 #### 4. Pyani 결과
   
-  - Pyani에서 자체적인 시각화 옵션을 제공하지만, 이미지 옵션만을 제공함
-    - 행렬을 바꿔 정렬하거나, 더 고해상도의 이미지를 얻거나, identity에 따른 색깔 옵션을 바꾸려면 표를 이용한 가공이 필요
-    - 표를 R의 Pheatmap을 통해 시각화
-  - Pheatmap이란?
-    - 
+    - Pyani에서 자체적인 시각화 옵션을 제공하지만, 이미지 옵션만을 제공함
+      - 행렬을 바꿔 정렬하거나, 더 고해상도의 이미지를 얻거나, identity에 따른 색깔 옵션을 바꾸려면 표를 이용한 가공이 필요
+      - tab으로 열을 나누고 enter로 행을 나눈, .tab format의 표를 R의 Pheatmap을 통해 시각화
+    - Pheatmap이란? - [link](https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap)
+      - heatmap은 주어진 table을 점수에 따라 색깔로 시각화하는 방식임.
+      - Pheatmap은 heatmap을 그려주고 유사도에 따라 추정되는 계통도를 그려주는 R의 library임.
+    - pheatmap command
+      - library("pheatmap")으로 불러오기
+      - pheatmap(AVIDEN) 으로 pheatmap 그리기
+    - pheatmap에서 sorting한 행렬 순서 불러오는 방법
+      - SOR <- pheatmap(AVIDEN)
+        ro <- SOR$tree_row$order
+        co <- SOR$tree_col$order
+        NEW <- AVIDEN[,ro]
+        NEWIDEN <- NEW[co,]
 
 ## clustering
 
