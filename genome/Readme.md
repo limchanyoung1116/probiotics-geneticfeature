@@ -3,7 +3,7 @@
 
 #### NCBI taxonomy ftp(https://ftp.ncbi.nih.gov/pub/taxonomy/). 2022/05/16 다운로드
 
-<br/><br/>
+<br/>
 
 |속|유전체수|종|유전체수|
 |:-|--:|:--|--:|
@@ -38,8 +38,6 @@
 <br/><br/>  
   
 ## 다운로드에 사용한 코드들
-
-<br/>
 
 #### 1. 9속에 속하는 모든 종, 아종들의 taxid 가져오기 
 #### 2. taxid를 이용해 종, 아종들의 genome들의 URL 가져오기
