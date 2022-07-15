@@ -26,7 +26,7 @@ Pyani/clustering
 
 #### 3. Pyani command
 
-  - pyani ~ 대신 average_nucleotide_identity.py ~ 를 사용
+  - pyani ~ 대신 average_nucleotide_identity.py ~ 를 사용    
     - 최신 버전에서는 pyani command를 사용하나 conda 채널의 버전은 0.2x 버전이므로 pyani command 사용 불가
   - average_nucleotide_identity.py -i ./inputgenus/Ligilactobacillus -o ./outputgenus/Ligilactobacillus -g -m ANIb --workers 54
     - -m 옵션은 ANIb, ANIm, 그리고 다른 알고리즘 중에 선택하는 옵션
@@ -54,8 +54,24 @@ Pyani/clustering
 
 ## clustering
 
-#### 1. Network clustering 이란?
+#### 1. Network clustering 알고리즘들
+  - Network clustering은 그래프 이론에서 다루는 분야이다.
+  - 그래프에서 각 요소는 node, 요소 사이 관계를 나타내는 선은 edge이다.
+  - Network clustering은, 그래프의 node들을 edge의 밀도를 기준으로 여러 그룹으로 나누는 과정이다.
+    - 그룹 내에서는 edge의 밀도가 높고, 그룹 외에서는 edge의 밀도가 낮다.
+  - [논문 조사](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4938516/)결과, clustering 알고리즘을 특징을 통해 분류할 수 있었다.
+  - 지역조사 알고리즘
+    - Louvain, SLM(smart local moving)은 좁은 지역에서 점점 넓은 지역으로 조사 범위를 넓히는 식으로 clustering을 진행한다.
+  - 길찾기 알고리즘
+    - Infomap, MCL(Markov Cluster algorithm)은 특정 node에서 다른 node로 가는 edge를 탐색한다.
+    - 2번의 시행 내로 자신에게 돌아올 확률을 통해, 다른 node들과 가장 많이 연결된 중심 node를 찾고 이를 중심으로 clustering 한다.
+  - 선택한 알고리즘
+    - 지역조사 알고리즘중 가장 대표적인 Louvain, 가장 진보된 Leiden을 선택했고 길찾기 알고리즘중 가장 대표적인 MCL을 선택했다.
 
-#### 2. 세 알고리즘의 특징
+#### 2. clustering 결과
+<br/>
 
-#### 3. clustering 결과
+||score|Cluster algorithm|Cluster parameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
+|:-|-:|-:-|:-|-:|-:|-:|-:|-:|
+|whole genomes|||373|505|767|412|510|
+|Cluster try 01|0.95|Louvain|default without self edge|18|27|17|26|30|
