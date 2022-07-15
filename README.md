@@ -34,40 +34,13 @@
 ## 2. probiotics 균주 유전자 데이터 수집
 
 <br/>
-- NCBI taxonomy ftp(https://ftp.ncbi.nih.gov/pub/taxonomy/). 2022/05/16 다운로드
-
-<br/>
-
-|속|유전체수|종|유전체수|
-|:-|--:|:--|--:|
-| <r4> Lactobacillus|1203|L.acidophilus|59|
-|||L.gasseri|61|
-|||L.delbrueckii ssp. bulgaricus|40|
-|||L.helveticus|155|
-|Lacticaseibacillus|526|L.casei|29|
-|||L.paracasei|209|
-|||L.rhammnosus|208|
-|Limosilactobacillus|510|L.fermentum|101|
-|||L.reuteri|316|
-|Lactiplantibacillus|767|L.plantarum|663|
-|Ligilactobacillus|373|L.salivarius|191|
-|Lactococcus|412|L.lactis|201|
-|Streptococcus|284(17259)|S.thermophilus|179|
-|Bifidobacterium|1554|B.bifidum|116|
-|||B.breve|158|
-|||B.longum|524|
-|||B.animalis ssp. lactis|199|
-|Enterococcus|5863|E.faecium|2722|
-|||E.faecalis|2084|
-
-<br/>
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
 2. Streptococcus를 제외한 8속에 대해서, NCBI taxid를 기준으로 함  
     - 8genus의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
     - Streptococcus에 대해서는 고시형 균주에 속하는 S.thermophilus만 모든 유전체를 수집
     - 다른 Streptococcus species들은 representative genome만 수집
-3. 총 11,326개의 genome data를 수집
+3. 총 11,489개의 genome data를 수집
 <br/>
 <br/>
 
