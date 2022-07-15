@@ -71,7 +71,7 @@ Pyani/clustering
 #### 2. clustering 결과
 <br/>
 
-|trial|score|Clus|유전체수|
+|trial|score|Cluster algorithm|유전체수|
 |:-|--:|:--|--:|
 | <r4> _Lactobacillus_|1203|_L.acidophilus_|59|
 
