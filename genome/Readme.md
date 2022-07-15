@@ -30,11 +30,16 @@
 <br/>
 
 - 총 9속, 11489개 유전체 데이터 수집
-- Streptococcus는 16,000개 이상의
+- probiotics 고시형 균주 19종이 9속에 속함
+- Streptococcus는 16,000개 이상의 genome data 중 representative genome과 S.thermophilus genome만을 수집
+- 수집한 genome 중 Enterococcus가 5863개로 50% 이상을 차지했음
+- E.facalis와 E.faecium이 19종 중 가장 높은 비율을 차지했음
   
+<br/><br/>  
   
-  
-  
+## 다운로드에 사용한 코드들
+
+<br/>
 
 #### 1. 9속에 속하는 모든 종, 아종들의 taxid 가져오기 
 #### 2. taxid를 이용해 종, 아종들의 genome들의 URL 가져오기
@@ -44,4 +49,4 @@
 
 <br/>
 
-### assembly_summary.txt나 nodes.dmp 파일은 ncbi taxonomy 사이트에서 tar.gz형식으로 다운 가능
+#### assembly_summary.txt나 nodes.dmp 파일은 ncbi taxonomy 사이트에서 tar.gz형식으로 다운 가능
