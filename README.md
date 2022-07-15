@@ -131,6 +131,7 @@
 #### 사용한 알고리즘
  - pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
  - 많은 알고리즘들 중 Leiden, Louvain, MCL을 선택
+ - cut off를 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999 7가지로 잡고 
 
 #### 결과
  - 세 알고리즘 모두 비슷한 수와 형태의 grouping을 보여줌
