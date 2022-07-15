@@ -3,7 +3,7 @@
 <br/>
 #### NCBI taxonomy ftp(https://ftp.ncbi.nih.gov/pub/taxonomy/). 2022/05/16 다운로드
 
-<br/>
+<br/><br/>
 
 |속|유전체수|종|유전체수|
 |:-|--:|:--|--:|
