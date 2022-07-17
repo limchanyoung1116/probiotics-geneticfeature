@@ -34,7 +34,8 @@ Pyani/clustering
     - -g는 pdf, png 등의 형식으로 pyani 결과를 시각화할지 선택 
 <br/>
 
-[ANIb_percentage_identity.pdf](https://github.com/limchanyoung1116/probiotics-geneticfeature/files/9126968/ANIb_percentage_identity.pdf)
+![ANIb_percentage_identity](https://user-images.githubusercontent.com/104611489/179381810-ba4c51b5-fdcd-4aaa-abaa-d3ac31f60189.png)
+
 
 #### 4. Pyani 결과
   
