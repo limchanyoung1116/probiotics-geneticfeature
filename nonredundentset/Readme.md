@@ -99,6 +99,7 @@ Pyani/clustering
 <br/>
  1) count한 group 수
  <br/>
+  
   - Leiden과 Louvain은 모든 set에서 완전히 같은 결과를 나타냈다.
   - MCL은 다른 둘과 비슷한 결과를 나타냈지만 일부 set에서 1~2씩 차이가 있었다.
   - MCL은 몇몇 set에서 결과를 내지 못했다.
@@ -108,6 +109,7 @@ Pyani/clustering
 <br/>
  2) cut off에 따른 group 수
  <br/>
+  
   - 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999를 기준으로 7번씩 group을 만들었다.
   - cut off가 낮을수록 genome 수를 많이 줄일 수 있지만 신뢰도가 떨어지게 된다.
   - cut off가 높아질수록 group 수도 당연히 많아졌다.
