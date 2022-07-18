@@ -86,7 +86,8 @@
  - Scoary 선택 이유
 <br/>
 
-### 4-2. [Neptune](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+### 4-2. Neptune
+ - github link (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
 <br/>
 
 ### 4-3. Scoary
@@ -103,14 +104,6 @@
  
 3. Scoary 
 
-
-## 5. Genome상에 유전자/서열 mapping하기
-<br/>
-
-### 5-1. Neptune 결과 mapping하기
-<br/>
-
-### 5-2. Scoary 결과 mapping하기
 <br/>
 
 ## 6. Probiotics non redundent set 제작
