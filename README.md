@@ -36,7 +36,7 @@
 <br/>
 <br/>
 
-## 2. [probiotics 균주 유전자 데이터 수집](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
+## 2. probiotics 균주 유전자 데이터 수집
 
 #### 수집 범위
 
@@ -48,7 +48,7 @@
 
 #### 수집 결과
 
-3. 총 11,489개의 genome data를 수집
+3. 총 11,489개의 genome data를 수집 - 수집한 genome들의 정보 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
 
 <br/> <br/>
 
@@ -113,7 +113,8 @@
 ### 5-2. Scoary 결과 mapping하기
 <br/>
 
-## [6. non redundent set 만들기](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
+## 6. Probiotics non redundent set 제작
+ - [non redundent set page](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
 #### Non redundent set의 필요성
  - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
  - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
