@@ -72,7 +72,6 @@
 1. phenotypeseeker란?
 2. 사용한 phenotypeseeker command
 3. phenotypeseeker 결과
-  
 <br/><br/>
 
 ## 4. Probiotics marker 유전자 찾기
@@ -90,8 +89,7 @@
     - k-mer 기반 알고리즘은 이미 Neptune을 선택했기 때문에 제외.
     - TreeWAS, BugWAS, Scoary, Seer, Pyseer 프로그램이 위 조건을 만족.
     - BugWAS는 TreeWAS의 파생 프로그램이고, Pyseer는 Seer의 파이썬 버전 프로그램이므로 통합.
-    - 이들 중 파이썬으로 구동되고, 최근까지 많은 논문에서 인용된 Scoary를 먼저 사용하기로 선택(피인용수 350).
-    
+    - 이들 중 파이썬으로 구동되고, 최근까지 많은 논문에서 인용된 Scoary를 먼저 사용하기로 선택(피인용수 350).    
 <br/>
 
 ### 4-2. Neptune
@@ -105,33 +103,38 @@
 <br/>
 
 2. Neptune 결과
-    - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
-    - k-mer의 길이가 길어질수록, 찾는 서열의 수는 줄어들고 길이는 길어짐.
-    - k = 19 이하에서보다 k = 22 이상에서 서열의 평균 score가 높음.
-    - score > 0.9인 정확도가 높은 서열의 비율은 k길이에 관계없이 비슷함.
-    - 같은 속의 genome 100개, k = 23까지는 결과가 출력되었으나 genome 400개, k = 23 부터는 결과가 출력되지 않음.
+  - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+  - k-mer의 길이가 길어질수록, 찾는 서열의 수는 줄어들고 길이는 길어짐.
+  - k = 19 이하에서보다 k = 22 이상에서 서열의 평균 score가 높음.
+  - score > 0.9인 정확도가 높은 서열의 비율은 k길이에 관계없이 비슷함.
+  - 같은 속의 genome 100개, k = 23까지는 결과가 출력되었으나 genome 400개, k = 23 부터는 결과가 출력되지 않음.
 <br/>
 
 3. IGV mapping
-    - IGV(Integraged genome viewer) article (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346182/)
-    - 
+  - IGV(Integraged genome viewer) article (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346182/)
+  - IGV는 genome 상에 mapping된 sequence나 gene을 시각화해 주는 tool임.
+  - toyset1 output mapping 결과
+    - k=16은 k=19, k=22, k=25, k=28과 다른 위치에 mapping되는 경우가 잦았음.
+    - k=16을 제외한 네 output은 같은 위치에 mapping되는 경우가 많았고, k 길이가 길수록 더 넓은 구간에 mapping됨.
+    - gene 뿐만 아니라 gene upstream region, intergenic region에도 sequence가 mapping되었음.
+  - IGV 결과를 바탕으로, toyset1 output의 sequence와 gff 파일의 gene을 연결짓는 알고리즘을 만들었음.
 <br/>
 
 ### 4-3. Scoary
 1. Scoary란?
-    - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
-    - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
-    - Gene presence/absence file은 Roary프로그램으로 만듬.(https://sanger-pathogens.github.io/Roary/)
-    - Scoary github(https://github.com/AdmiralenOla/Scoary)
+  - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
+  - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
+  - Gene presence/absence file은 Roary프로그램으로 만듬.(https://sanger-pathogens.github.io/Roary/)
+  - Scoary github(https://github.com/AdmiralenOla/Scoary)
 <br/>
 
 2. Roary/Scoary result - data (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
-    - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
-    - Roary 결과 26개 _Streptococcus_ genome set에 총 35,410개의 gene이 존재
-      - 22개의 gene은 26개 genome 모두에 존재했고, 약 31,400개의 gene은 genome 하나에서만 존재했음.
-    - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
-      - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
-      - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
+  - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
+  - Roary 결과 26개 _Streptococcus_ genome set에 총 35,410개의 gene이 존재
+    - 22개의 gene은 26개 genome 모두에 존재했고, 약 31,400개의 gene은 genome 하나에서만 존재했음.
+  - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
+    - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
+    - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
 <br/><br/>
 
 ## 6. Probiotics non redundent set 제작
