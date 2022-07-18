@@ -1,0 +1,26 @@
+06/24/2022 04:54:42 PM    ==== Scoary started ====
+06/24/2022 04:54:42 PM    Command: /home/cylim/miniconda3/envs/IGV/bin/scoary -g gene_presence_absence.csv -t traits.csv
+06/24/2022 04:54:42 PM    Reading gene presence absence file
+06/24/2022 04:54:42 PM    Creating Hamming distance matrix based on gene presence/absence
+06/24/2022 04:54:43 PM    Building UPGMA tree from distance matrix
+06/24/2022 04:54:43 PM    Reading traits file
+06/24/2022 04:54:43 PM    Finished loading files into memory.
+
+
+06/24/2022 04:54:43 PM    ==== Performing statistics ====
+06/24/2022 04:54:43 PM    -- Filtration options --
+06/24/2022 04:54:43 PM    Individual (Naive):    0.05
+06/24/2022 04:54:43 PM    Collapse genes:    False
+
+
+06/24/2022 04:54:43 PM    Tallying genes and performing statistical analyses
+06/24/2022 04:54:43 PM    Gene-wise counting and Fisher's exact tests for trait: Probiotic
+06/24/2022 04:54:44 PM    Adding p-values adjusted for testing multiple hypotheses
+06/24/2022 04:54:44 PM    Storing results: Probiotic
+06/24/2022 04:54:44 PM    Calculating max number of contrasting pairs for each nominally significant gene
+06/24/2022 04:54:46 PM    Storing results to file
+06/24/2022 04:54:46 PM    
+
+06/24/2022 04:54:46 PM    ==== Finished ====
+06/24/2022 04:54:46 PM    Checked a total of 35410 genes for associations to 1 trait(s). Total time used: 4 seconds.
+06/24/2022 04:54:46 PM    No warnings were recorded.
