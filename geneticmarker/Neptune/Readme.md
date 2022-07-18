@@ -84,19 +84,24 @@ Neptune
   - Neptune의 특성상, genome의 수가 늘어날수록 출력되는 contig가 적어질 수밖에 없음.
     - 따라서 Neptune은 100개 이하의 genome set에서만 사용하기로 결론지음.
 <br/>
-![kbiglong2](https://user-images.githubusercontent.com/104611489/179491898-eaae14eb-f1df-408f-b22f-af2846d77205.PNG)
+
 
 ## 5. IGV mapping
 
 1) IGV란?
 <br/>
 
+![IGV](https://user-images.githubusercontent.com/104611489/179492527-7ec036fa-8486-4b55-abc5-65be1fdeda5b.jpg)
 
 <br/>
   - Integrated genome viewer의 줄임말
   - fna파일과 gff, bam 파일을 input으로 받고, fna sequence 상에 gff의 gene이나 bam의 sequence를 위치시켜 시각화해 준다
   
 2) sorted .bam file 변환
+  
+  - IGV는 input으로 sequence 순서대로 정렬된 .bam 파일과 gff 파일을 받음.
+  - Neptune output인 consolidated.fasta 파일로부터 .bam file 로 변환하기
+    - Samtools
 
 3) IGV 결과
 4) sequence to gene 알고리즘
