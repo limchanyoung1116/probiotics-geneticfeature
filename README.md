@@ -92,18 +92,18 @@
 
 ### 4-3. Scoary
 1. Scoary란?
-  - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
-  - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
-  - Gene presence/absence file은 Roary프로그램으로 만듬.(https://sanger-pathogens.github.io/Roary/)
-  - Scoary github(https://github.com/AdmiralenOla/Scoary)
+    - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
+    - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
+    - Gene presence/absence file은 Roary프로그램으로 만듬.(https://sanger-pathogens.github.io/Roary/)
+    - Scoary github(https://github.com/AdmiralenOla/Scoary)
 
 2. Roary/Scoary result - data (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
-  - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
-  - Roary 결과 26개 _Streptococcus_ genome set에 총 35,410개의 gene이 존재
-    - 22개의 gene은 26개 genome 모두에 존재했고, 약 31,400개의 gene은 genome 하나에서만 존재했음.
-  - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
-    - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
-    - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
+    - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
+    - Roary 결과 26개 _Streptococcus_ genome set에 총 35,410개의 gene이 존재
+      - 22개의 gene은 26개 genome 모두에 존재했고, 약 31,400개의 gene은 genome 하나에서만 존재했음.
+    - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
+      - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
+      - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
 
 
 <br/>
