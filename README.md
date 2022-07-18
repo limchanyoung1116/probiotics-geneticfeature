@@ -87,7 +87,7 @@
 <br/>
 
 ### 4-2. Neptune
- - github link (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+ - Neptune github (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
 <br/>
 
 ### 4-3. Scoary
