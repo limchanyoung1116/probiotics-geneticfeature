@@ -64,7 +64,7 @@
 3. jellyfish를 활용한 연속적인 k-mer counting
 <br/><br/>
 
-### 3-2. tool : phenotypeseeker
+### 3-2. tool : Phenotypeseeker
 <br/>
 
 (여기에 phenotypeseeker 링크 달예정)
@@ -75,7 +75,7 @@
   
 <br/><br/>
 
-## 4. probiotics marker 유전자 찾기
+## 4. Probiotics marker 유전자 찾기
 <br/>
 
 ### 4-1. tool 선택하기
@@ -88,14 +88,27 @@
     - 너무 오래된 tool은 호환성 문제가 발생할 수 있으므로 제외.
     - SNP기반 알고리즘은 목표로 하는 큰 locus를 찾기 부적합하므로 제외.
     - k-mer 기반 알고리즘은 이미 Neptune을 선택했기 때문에 제외.
-    - TreeWAS, BugWAS, Scoary, seer, pyseer 프로그램이 위 조건을 만족.
-    - BugWAS는 TreeWAS의 파생 프로그램이고, pyseer는 seer의 파이썬 버전 프로그램이므로 통합.
+    - TreeWAS, BugWAS, Scoary, Seer, Pyseer 프로그램이 위 조건을 만족.
+    - BugWAS는 TreeWAS의 파생 프로그램이고, Pyseer는 Seer의 파이썬 버전 프로그램이므로 통합.
     - 이들 중 파이썬으로 구동되고, 최근까지 많은 논문에서 인용된 Scoary를 먼저 사용하기로 선택(피인용수 350).
     
 <br/>
 
 ### 4-2. Neptune
- - Neptune github (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+1. Neptune이란?
+  - Neptune github(https://github.com/phac-nml/neptune)
+  - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
+  - bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
+  - inclusion group과 exclusion group을 설정
+  - inclusion group들에서는 존재하지만 exclusion group에서는 존재하지 않는 genomic locus를 찾는다
+  - k-mer를 기준으로 일치도를 판단하며 blastn을 이용해 두 서열을 비교한다.
+<br/>
+
+2. Neptune 결과
+  - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+  - ingroup : _Streptococcus thermophilus_ 6 genome
+  - outgroup : _Other Streptococcus_ 20 genome
+  - 
 <br/>
 
 ### 4-3. Scoary
