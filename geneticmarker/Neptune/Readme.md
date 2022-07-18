@@ -1,4 +1,7 @@
 1. Neptune이란?
+<br/>
+
+![image](https://user-images.githubusercontent.com/104611489/179478062-5d99e63c-69a8-4e75-a6de-fc0a599fc989.png)
   
     - bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
     - inclusion group과 exclusion group을 설정
