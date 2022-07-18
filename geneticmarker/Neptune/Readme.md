@@ -10,7 +10,8 @@ Neptune
   - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
   - bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
   - inclusion group과 exclusion group을 설정
-  - inclusion group에서는 공유되지만 exclusion group에서는 존재하지 않는 genomic locus를 찾는다
+  - inclusion group에서는 공유되지만 exclusion group에서는 존재하지 않는 genomic locus를 찾는다.
+<br/>
 
 ## 2. Neptune 알고리즘
 
@@ -37,13 +38,22 @@ Neptune
   - inclusion : representative를 포함한 6개의 Streptococcus thermophilus genome
   - exclusion : 20개의 thermophilus가 아닌 Streptococcus genome
   - k=10, k=13, k=16, k=19, k=22, k=25, k=28 으로 진행
-      - kmer의 k값에 따른 결과의 차이 비교
+    - kmer의 k값에 따른 결과의 차이 비교
     - command : Neptune --inclusion/... --exclusion/... --output/... k=x
   
 2) toyset 2
     
   - inclusion : Lactococcus lactis 201개 genome 전체
   - exclusion : L.lactis를 제외한 Lactococcus 211개 genome 전체
+  - k = 23
+  - Neptune으로 어느정도 크기의 ingroup/outgroup까지 작업이 가능한지 확인.
+
+3) toyset 3
+
+  - inclusion : Lactococcus lactis 201개 genome중 20개
+  - exclusion : L.lactis를 제외한 Lactococcus 211개 genome중 80개
+  - k = 23
+  - Neptune으로 어느정도 크기의 ingroup/outgroup까지 작업이 가능한지 확인.
   <br/>
   
 ## 4. Neptune 결과
@@ -66,9 +76,11 @@ Neptune
   - k = 22 이상과 19 이하에서 정확도 차이가 남
   - 최소, 최대 contig 길이는 k와 상관관계가 있지만, k = 22 이상에서는 최대길이 변화 없음
   
-2) toyset 2
+2) toyset 2,3
     
-  - k = 23 에서 결과가 출력되지 않음.
+  - toyset 2에서는 결과가 출력되지 않음.
+  - toyset 3에서는 결과가 출력되었으나, 총 46개의 서열만을 찾아냄.
+    - score > 0.8 genome은 7개, score > 0.5 genome은 31개에 불과했음.
   - Neptune의 특성상, genome의 수가 늘어날수록 출력되는 contig가 적어질 수밖에 없음.
     - 따라서 Neptune은 100개 이하의 genome set에서만 사용하기로 결론지음.
 <br/>
