@@ -105,10 +105,16 @@
 <br/>
 
 2. Neptune 결과
-  - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
-  - ingroup : _Streptococcus thermophilus_ 6 genome
-  - outgroup : _Other Streptococcus_ 20 genome
-  - 
+    - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+    - k-mer의 길이가 길어질수록, 찾는 서열의 수는 줄어들고 길이는 길어짐.
+    - k = 19 이하에서보다 k = 22 이상에서 서열의 평균 score가 높음.
+    - score > 0.9인 정확도가 높은 서열의 비율은 k길이에 관계없이 비슷함.
+    - 같은 속의 genome 100개, k = 23까지는 결과가 출력되었으나 genome 400개, k = 23 부터는 결과가 출력되지 않음.
+<br/>
+
+3. IGV mapping
+    - IGV(Integraged genome viewer) article (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346182/)
+    - 
 <br/>
 
 ### 4-3. Scoary
@@ -117,6 +123,7 @@
     - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
     - Gene presence/absence file은 Roary프로그램으로 만듬.(https://sanger-pathogens.github.io/Roary/)
     - Scoary github(https://github.com/AdmiralenOla/Scoary)
+<br/>
 
 2. Roary/Scoary result - data (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
     - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
@@ -125,9 +132,7 @@
     - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
       - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
       - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
-
-
-<br/>
+<br/><br/>
 
 ## 6. Probiotics non redundent set 제작
  - non redundent set page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
@@ -150,6 +155,7 @@
  - pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
  - 많은 알고리즘들 중 Leiden, Louvain, MCL을 선택
  - cut off를 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999 7가지로 잡고 진행. 
+<br/>
 
 #### 결과
  - 세 알고리즘 모두 비슷한 수와 형태의 grouping을 보여줌
