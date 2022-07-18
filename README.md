@@ -114,7 +114,7 @@
 <br/>
 
 ## 6. Probiotics non redundent set 제작
- - [non redundent set page](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
+ - non redundent set page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
 #### Non redundent set의 필요성
  - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
  - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
@@ -126,7 +126,7 @@
  - 수집한 9속의 genome중, 이미 representative로 압축된 Streptococcus를 제외한 8속에 대해 속별로 pyani 진행
  - pyani의 output을 시각화하는 방법으로 R의 pheatmap package를 선택
  - pheatmap은 2차원 표에서 색깔의 차이로 genome들 사이의 identity 점수를 시각화해주고, 추정되는 계통도를 각 변에 그려줌
- - [pyani output data](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/Pyani)
+ - pyani output data page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/Pyani)
  <br/>
  
 ### 6-2. tool : network clustering algorithm
