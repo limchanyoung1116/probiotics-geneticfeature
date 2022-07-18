@@ -83,7 +83,15 @@
 2. 직접 만들기보다는 기존에 알려진 tool들 중 목적에 맞는 효율적인 tool을 찾고 사용하는 편이 효율적.
 3. 첫번째 tool은 기존의 k-mer를 통한 연구와 연계성을 위해, k-mer 기반 알고리즘인 Neptune을 사용.
 4. 두번째 tool은 여러 tool들의 특징을 비교한 논문에서, 가장 적합하다고 생각되는 Scoary를 선택.
- - Scoary 선택 이유
+  - Scoary 선택 이유
+    - tool들을 비교한 논문을 읽고 비교 후 선택. (논문 링크 - https://www.cell.com/trends/microbiology/fulltext/S0966-842X(20)30317-6#relatedArticles)
+    - 너무 오래된 tool은 호환성 문제가 발생할 수 있으므로 제외.
+    - SNP기반 알고리즘은 목표로 하는 큰 locus를 찾기 부적합하므로 제외.
+    - k-mer 기반 알고리즘은 이미 Neptune을 선택했기 때문에 제외.
+    - TreeWAS, BugWAS, Scoary, seer, pyseer 프로그램이 위 조건을 만족.
+    - BugWAS는 TreeWAS의 파생 프로그램이고, pyseer는 seer의 파이썬 버전 프로그램이므로 통합.
+    - 이들 중 파이썬으로 구동되고, 최근까지 많은 논문에서 인용된 Scoary를 먼저 사용하기로 선택(피인용수 350).
+    
 <br/>
 
 ### 4-2. Neptune
