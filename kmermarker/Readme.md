@@ -84,13 +84,13 @@ genome상에서 특징적인 k-mer marker 찾기
       - input file들의 형식은 fasta 또는 fastq
   - modeling subcommands
     - Options for k-mer lists:
-      - -l , --kmer_length   : k-mer의 길이. 1이상 32이하. default = 13
-      - -c INT, --cutoff INT : k-mer 빈도 cut off. defalut = 1
+      - -l , --kmer_length   (k-mer의 길이. 1이상 32이하. default = 13)
+      - -c INT, --cutoff INT (k-mer 빈도 cut off. defalut = 1)
     - Options for k-mer filtering by frequency:
-      - --min INT            : genome들에서 k-mer의 최소 등장 횟수.
-      - --max INT            : genome들에서 k-mer의 최대 등장 횟수.
+      - --min INT            (genome들에서 k-mer의 최소 등장 횟수)
+      - --max INT            (genome들에서 k-mer의 최대 등장 횟수)
       - max값과 min값 사이로 등장한 k-mer만 기록됨.
     - Options for k-mer filtering by pvalue:
-      - --pvalue             : k-mfault = 0.05)
-      - --n_kmers             The maximum number of (lowest p-valued) k-mers selected for modelling (default = 1000)
-      - --n_kmers 0           no limit 
+      - --pvalue             (k-mer의 검정과정에서 P-value cut off. default = 0.05)
+      - --n_kmers            (모델링에 사용될 최대 k-mer 수. P-value가 낮은 순서대로 사용. default = 1000)
+      - --n_kmers 0          (기준을 만족한 모든 k-mer를 모델링에 사용)
