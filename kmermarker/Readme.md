@@ -5,8 +5,8 @@ genome상에서 특징적인 k-mer marker 찾기
 ### Jellyfish 사용법
 <br/>
 
-![jellyinputnew](https://user-images.githubusercontent.com/104611489/179664442-77db4ff0-95ec-46a7-ba83-002ecec9d734.PNG)
-![jellyoutput](https://user-images.githubusercontent.com/104611489/179664491-8d1b5069-6ceb-4361-97b0-a10971d62aca.jpg)
+![jellyinputnew](https://user-images.githubusercontent.com/104611489/179679041-79f7b93a-2ad5-43bf-a81d-ad58556fda95.PNG)
+![jellyoutput](https://user-images.githubusercontent.com/104611489/179679072-944995ad-0e18-452d-b56e-2b5296736e10.jpg)
 <br/>
 
   - Jellyfish github (https://github.com/gmarcais/Jellyfish)
@@ -66,5 +66,31 @@ genome상에서 특징적인 k-mer marker 찾기
       - x개의 염기는 같지만 서로 다른 서열의 경우 table에서 충돌이 일어남.
       - open hashing의 제곱 조사법을 통해 다른 칸으로 옮기고, 얼마나 옮겼는지 기록.
     - 알고리즘 링크(미완성)
+<br/>
 
-  
+## 2. Phenotypeseeker
+
+### Phenotypeseeker 사용법
+
+  - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
+  - Phenotypeseeker는 genome상의 k-mer와 genome의 표현형 사이의 상관관계를 학습하는 프로그램.
+  - modeling 단계만을 이용해 k-mer와 phenotype과의 상관관계를 알아낼 수 있음.
+  - prediction 단계에서는, modeling 단계에서 학습된 model을 바탕으로 다른 genome에 적용할 수 있음.
+    - k-mer의 존재 유무를 통해 학습된 phenotype의 유무를 다른 genome에서도 확인 가능.
+  - Phenotypeseeker modeling command
+    - Phenotypeseeker modeling data.pheno
+    - data.pheno에는 Phenotypeseeker에 사용할 파일들의 정보를 적어준다.
+      - SampleID, 경로와위치, 표현형의유무(1,0)
+      - input file들의 형식은 fasta 또는 fastq
+  - modeling subcommands
+    - Options for k-mer lists:
+      - -l , --kmer_length   : k-mer의 길이. 1이상 32이하. default = 13
+      - -c INT, --cutoff INT : k-mer 빈도 cut off. defalut = 1
+    - Options for k-mer filtering by frequency:
+      - --min INT            : genome들에서 k-mer의 최소 등장 횟수.
+      - --max INT            : genome들에서 k-mer의 최대 등장 횟수.
+      - max값과 min값 사이로 등장한 k-mer만 기록됨.
+    - Options for k-mer filtering by pvalue:
+      - --pvalue             : k-mfault = 0.05)
+      - --n_kmers             The maximum number of (lowest p-valued) k-mers selected for modelling (default = 1000)
+      - --n_kmers 0           no limit 
