@@ -56,12 +56,20 @@
 ### 3-1. tool : jellyfish
 <br/>
 
-(여기에 젤리피쉬 링크 달예정)
+1. Jellyfish란?
+  - Jellyfish github (https://github.com/gmarcais/Jellyfish)
+  - 주어진 sequence에 존재하는 모든 k-mer들을 빠르게 counting해주는 프로그램.
+  - 원하는 k 길이는 선택 가능하나, k 길이가 길어질수록 작업시간이 길어지고 output 파일이 커짐.
+<br/>
 
-1. jellyfish란?
-    - 주어진 두 genome에서
-2. 사용한 jellyfish command
-3. jellyfish를 활용한 연속적인 k-mer counting
+2. k-mer compare
+  - Jellyfish는 sequence의 k-mer의 counting 기능만 제공함.
+    - 다른 sequence의 k-mer를 비교하거나, 여러 파일의 k-mer를 같이 counting하려면 알고리즘을 짜야 함.
+  - Jellyfish output을 읽고 연속적으로 k-mer를 count하는 알고리즘.
+  - Jellyfish를 이용하지 않는 방법
+    - 여러 genome을 input으로 받고, ingroup에서는 존재하지만 outgroup에선 존재하지 않는 sequence를 찾는 알고리즘.
+    - 약 50% 정도 완성됨.
+
 <br/><br/>
 
 ### 3-2. tool : Phenotypeseeker
