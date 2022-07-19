@@ -100,8 +100,8 @@ Neptune
   
 2) IGV input format으로 변환
   <br/>
+  
   ![Neptunemyset1](https://user-images.githubusercontent.com/104611489/179651690-11becffb-910a-4434-b220-6167c455584d.PNG)
-
   
   <br/>
   
@@ -141,6 +141,11 @@ Neptune
   - k=16~k=28 다섯 output을 비교했을 때, k=19, k=22가 다른 output과 가장 많이 겹쳤음.
 
 4) sequence to gene 알고리즘
-
-
-Neptune - -(Bedtools, Samtools, Bowtie2) - -> IGV
+  
+  - Neptune의 output sequence와 겹치는 gene locus를 찾기 위해 Bedtools를 사용.
+  - Bedtools github (https://github.com/arq5x/bedtools2)
+  - Bedtools로 .sam file을 .bed file으로 바꾸고 reference genome의 .gff 파일과 matching
+    - .bed file의 sequence와 겹치는 gene들이 존재하는 .gff file이 output
+  - Neptune output을 .bed file로 만들고 _S. thermophilus_ representative genome .gff file과 matching.
+  - bedtools output .gff file의 gene들을 clustering 하는 알고리즘
+    - 일정 bp 내에 있는 gene들을 하나의 cluster로 묶는다.
