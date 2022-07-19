@@ -118,6 +118,7 @@ Neptune
     - Bowtie2 manual (http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#building-from-source)
     - sequence.fasta 형식의 파일을 referencesequence.fna 형식 파일에 mapping하여 .sam 형식으로 바꿔줌.
     - 두 sequence를 match, mismatch, gap에 기반한 score를 통해 비교하여, 일정 score가 넘으면 mapping
+    - 먼저 reference sequence를 indexing하는 과정이 필요.
     - 사용한 커맨드
       - -p 5 -f --very-sensitive-local -x ./index/thermoref -U ./neptuneoutput/k16.fasta -S ./SAM/ST26k16 --un ./SAM/ST26k16non
   - Samtools
