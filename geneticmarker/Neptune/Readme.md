@@ -150,3 +150,4 @@ Neptune
   - Neptune output을 .bed file로 만들고 _S. thermophilus_ representative genome .gff file과 matching.
   - bedtools output .gff file의 gene들을 clustering 하는 알고리즘
     - 일정 bp 내에 있는 gene들을 하나의 cluster로 묶는다.
+    - 알고리즘과 input/output (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune/IGVfiles/clustering)
