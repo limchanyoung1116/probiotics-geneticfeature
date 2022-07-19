@@ -26,14 +26,14 @@ genome상에서 특징적인 k-mer marker 찾기
   - 따라서 다른 genome의 k-mer를 비교하기 위해서는 알고리즘을 짜야 함.
 <br/>
 
-1) Jellyfish output을 이용한 k-mer 비교
+##### 1) Jellyfish output을 이용한 k-mer 비교
   
   - Jellyfish output 또한 k길이의 서열들로 이루어진 fasta format 파일임.
   - Jellyfish output file에 jellyfish를 다시 진행하고, output으로 나온 .jf파일들을 merge 기능을 이용해 합침.
   - 합친 .jf 파일을 dump 하고 등장횟수에 따라 sorting.
   - 주어진 genome set중 몇 개의 genome이 특정 k-mer를 포함하는지 셀수있음.
 
-2) hashing function을 이용한 k-mer 비교 알고리즘
+##### 2) hashing function을 이용한 k-mer 비교 알고리즘
 
   - hashing이란?
     - 특정한 규칙에 의해 key의 할당위치가 정해지는 dictionary의 일종.
@@ -94,3 +94,20 @@ genome상에서 특징적인 k-mer marker 찾기
       - --pvalue             (k-mer의 검정과정에서 P-value cut off. default = 0.05)
       - --n_kmers            (모델링에 사용될 최대 k-mer 수. P-value가 낮은 순서대로 사용. default = 1000)
       - --n_kmers 0          (기준을 만족한 모든 k-mer를 모델링에 사용)
+<br/>
+
+### Phenotypeseeker 결과
+
+##### 1) toyset 1
+  - 
+##### 2) toyset 2
+##### 3) toyset 3
+  - Phenotype 1 : _Lactococcus Lactis_ 202 genome (Probiotics 고시형 균주)
+  - Phenotype 0 : Other _Lactococcus_ 212 genome (Probiotics 고시형 균주가 아닌 균주)
+  - 
+  - 결과
+    - Phenotypeseeker modeling 실패
+    
+  - genome 수가 많아질수록, 조건에 맞는 k-mer가 줄어드므로 일정 수 이상의 genome에서는 k-mer를 찾지 못함.
+  - 비교군과 대조군의 근연관계가 가까울수록 genome sequence의 유사도가 높음.
+    - 공유하는 k-me
