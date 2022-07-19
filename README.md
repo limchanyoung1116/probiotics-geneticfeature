@@ -78,8 +78,14 @@
 (여기에 phenotypeseeker 링크 달예정)
 
 1. phenotypeseeker란?
-2. 사용한 phenotypeseeker command
-3. phenotypeseeker 결과
+  - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
+  - k-mer를 이용하여 특정 genome에서 나타날 표현형을 예측하는 알고리즘.
+    - 주어진 genome들에서 나타나는 k-mer들을 모두 기록.
+    - genome들의 표현형들과 대조하여 특정 k-mer와 표현형 사이의 상관관계를 찾아냄.
+<br/>
+
+2. Phenotypeseeker 결과
+  - 
 <br/><br/>
 
 ## 4. Probiotics marker 유전자 찾기
