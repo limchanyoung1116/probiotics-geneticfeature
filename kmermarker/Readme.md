@@ -26,15 +26,13 @@ genome상에서 특징적인 k-mer marker 찾기
   - 따라서 다른 genome의 k-mer를 비교하기 위해서는 알고리즘을 짜야 함.
 <br/>
 
-##### 1) Jellyfish output을 이용한 k-mer 비교
-  
+##### 1) Jellyfish output을 이용한 k-mer 비교  
   - Jellyfish output 또한 k길이의 서열들로 이루어진 fasta format 파일임.
   - Jellyfish output file에 jellyfish를 다시 진행하고, output으로 나온 .jf파일들을 merge 기능을 이용해 합침.
   - 합친 .jf 파일을 dump 하고 등장횟수에 따라 sorting.
   - 주어진 genome set중 몇 개의 genome이 특정 k-mer를 포함하는지 셀수있음.
 
 ##### 2) hashing function을 이용한 k-mer 비교 알고리즘
-
   - hashing이란?
     - 특정한 규칙에 의해 key의 할당위치가 정해지는 dictionary의 일종.
     - 주어진 문자열이나 숫자에 특정한 규칙에 따른 list/array 상의 위치를 할당.
@@ -79,11 +77,15 @@ genome상에서 특징적인 k-mer marker 찾기
     - k-mer의 존재 유무를 통해 학습된 phenotype의 유무를 다른 genome에서도 확인 가능.
   - Phenotypeseeker modeling command
     - Phenotypeseeker modeling data.pheno
-    - data.pheno에는 Phenotypeseeker에 사용할 파일들의 정보를 적어준다.
+    - data.pheno에는 Phenotypeseeker에 사용할 파일들의 정보를 적어준다.      
       - SampleID, 경로와위치, 표현형의유무(1,0)
       - input file들의 형식은 fasta 또는 fastq
+<br/>
+
   - modeling subcommands
-    - Options for k-mer lists:
+<br/>
+
+    - Options for k-mer lists:      
       - -l , --kmer_length   (k-mer의 길이. 1이상 32이하. default = 13)
       - -c INT, --cutoff INT (k-mer 빈도 cut off. defalut = 1)
     - Options for k-mer filtering by frequency:
@@ -98,16 +100,47 @@ genome상에서 특징적인 k-mer marker 찾기
 
 ### Phenotypeseeker 결과
 
-##### 1) toyset 1
-  - 
-##### 2) toyset 2
-##### 3) toyset 3
+
+##### 1) testset 2
+  - Phenotype 1 : _Streptococcus thermophilus_ 15 genome (Probiotics 고시형 균주)
+  - Phenotype 0 : Other _Streptococcus_ 44 genome (Probiotics 고시형 균주가 아닌 균주)
+  - subcommand : -l 24 
+  - 결과
+    - 
+<br/>
+
+##### 2) testset 3
+  - Phenotype 1 : _Streptococcus thermophilus_ 5 genome (Probiotics 고시형 균주)
+  - Phenotype 0 : _Bifidobacterium_ 43 genome (Probiotics 고시형 균주가 아닌 균주)
+  - subcommand : -l 24
+  - 특이사항 : 2회 반복
+  - 결과
+    - 정상적으로 결과가 출력됨
+    - _S. thermophhilus_ 5 genome을 표현형 1로 맞게 예측.
+    - _Bifidobacterium_ 43 genome을 표현형 0으로 맞게 예측.
+    - 학습 결과 만들어진 k-mer coefficient value에서 문제 발견
+  - 문제점
+    - 두 번의 시행에서, logistic regression modeling을 통해 학습된 k-mer coefficient value가 다름.
+    - 두 번의 시행에서, 1000개 cut off 안에 들어간 k-mer들이 달랐음.
+<br/>
+
+##### 3) testset 4
   - Phenotype 1 : _Lactococcus Lactis_ 202 genome (Probiotics 고시형 균주)
   - Phenotype 0 : Other _Lactococcus_ 212 genome (Probiotics 고시형 균주가 아닌 균주)
-  - 
+  - subcommand : -l 24
   - 결과
     - Phenotypeseeker modeling 실패
-    
+<br/>
+
+##### 4) 최종 결과
   - genome 수가 많아질수록, 조건에 맞는 k-mer가 줄어드므로 일정 수 이상의 genome에서는 k-mer를 찾지 못함.
-  - 비교군과 대조군의 근연관계가 가까울수록 genome sequence의 유사도가 높음.
-    - 공유하는 k-me
+  - 비교군과 대조군의 근연관계가 가까울수록 genome sequence의 유사도가 높아 k-mer를 찾기 힘들어짐.
+    - sequence 유사도가 높으면 공유하는 k-mer도 많아지므로 조건을 만족하는 k-mer의 수도 줄어듦.
+<br/>
+
+##### 5) Phenotypeseeker의 단점
+  - 표현형과 관련성이 확실하고, unique한 k-mer를 찾기 위해서는 k값이 어느정도 커야 함.
+  - k값이 너무 커지면, 대부분의 k-mer가 1번 등장하고 이 경우 제대로 된 modeling이 되지 않음.
+    - Phenotypeseeker는 logistic regression model 학습을 사용.
+    - 학습 과정에서, 대부분의 k-mer가 1회 등장하면 가중치가 제대로 설정되지 않고 결과도 제대로 출력되지 않음.
+  - 결론적으로, Phenotypeseeker는 어떤 k-mer가 더 표현형과 관련있는지 오직 등장횟수만으로 판단함.
