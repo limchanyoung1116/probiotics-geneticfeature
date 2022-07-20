@@ -4,30 +4,30 @@ Pyani/clustering
 
 #### 1. Pyani란?
 
-  - genome들 사이의 ANI(Average Nucleotide Identity)를 비교해주는 프로그램
+  - Genome들 사이의 ANI(Average Nucleotide Identity)를 비교해주는 프로그램.
   - ANI란?
-    - 두 genome들의 Nucleotide 서열 일치도
-    - genome A와 B 사이의 ANI 점수가 0.98이면, 98%의 Nucleotide 서열이 일치함을 뜻
-    - 서열 일치도를 판단할 때에는 blastn, murmur 등 기존의 서열 비교 프로그램이 주로 사용됨
+    - 두 genome들의 Nucleotide 서열 일치도.
+    - genome A와 B 사이의 ANI 점수가 0.98이면, 98%의 Nucleotide 서열이 일치함을 뜻함
+    - 서열 일치도를 판단할 때에는 blastn, murmur 등 기존의 서열 비교 프로그램이 주로 사용됨.
   - ANI의 방향성
-    - genome의 서열 전체를 비교하려면 오래 걸리기 때문에 한 서열을 일정 단위로 잘라서 비교
-    - ANI A->B와 ANI B->A 점수가 서로 다르게 나올 수 있음
+    - Genome의 서열 전체를 1대1로 비교하려면 오래 걸리기 때문에 한 서열을 일정 단위로 잘라서 비교.
+    - ANI A->B와 ANI B->A 점수가 서로 다르게 나올 수 있음.
 
 #### 2. Pyani set
 
-  - 9속 중에서 이미 representative genome만을 남긴 Streptococcus를 제외한 8속에 대해 속 단위로 진행
-  - genome 수 1000개를 기준으로 blastn과 murmur를 선택
-    - blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
-    - murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
-  - blastn 선택 genome
-    - Ligilactobacillus, Lactococcus, Lacticaseibacillus, Limosilactobacillus, Lactiplantibacillus 5속
-  - murmur 선택 genome
-    - Lactobacillus, Bifidobacterium, Enterococcus 3속
+  - 9속 중에서 이미 representative genome만을 남긴 _Streptococcus_, _Enterococcus_ 를 제외한 7속에 대해 속 단위로 진행
+  - Genome 수 1000개를 기준으로 blastn과 murmur를 선택
+    - Blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
+    - Murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
+  - Blastn 선택 genome
+    - _Ligilactobacillus_, _Lactococcus_, _Lacticaseibacillus_, _Limosilactobacillus_, _Lactiplantibacillus_ 5속
+  - Burmur 선택 genome
+    - Lactobacillus, Bifidobacterium, 2속
 
 #### 3. Pyani command
 
-  - pyani ~ 대신 average_nucleotide_identity.py ~ 를 사용    
-    - 최신 버전에서는 pyani command를 사용하나 conda 채널의 버전은 0.2x 버전이므로 pyani command 사용 불가
+  - Pyani ~ 대신 average_nucleotide_identity.py ~ 를 사용    
+    - 최신 버전에서는 'pyani' command를 사용하나 conda 채널의 버전은 0.2x 버전이므로 'pyani' command 사용 불가
   - average_nucleotide_identity.py -i ./inputgenus/Ligilactobacillus -o ./outputgenus/Ligilactobacillus -g -m ANIb --workers 54
     - -m 옵션은 ANIb, ANIm, 그리고 다른 알고리즘 중에 선택하는 옵션
     - --workers는 사용할 쓰레드의 수를 지정
@@ -45,10 +45,10 @@ Pyani/clustering
   - Pheatmap이란? - [documentation](https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap)
     - heatmap은 주어진 table을 점수에 따라 색깔로 시각화하는 방식임.
     - Pheatmap은 heatmap을 그려주고 유사도에 따라 추정되는 계통도를 그려주는 R의 library임.
-  - pheatmap command
+  - Pheatmap command
     - library("pheatmap")으로 불러오기
     - pheatmap(AVIDEN) 으로 pheatmap 그리기
-  - pheatmap에서 sorting한 행렬 순서 불러오는 방법
+  - Pheatmap에서 sorting한 행렬 순서 불러오는 방법
     
     - SOR <- pheatmap(AVIDEN)
     - ro <- SOR$tree_row$order
@@ -56,7 +56,7 @@ Pyani/clustering
     - NEW <- AVIDEN[,ro]
     - NEWIDEN <- NEW[co,]
 
-## clustering
+## Clustering
 
 #### 1. Network clustering 알고리즘들
   - Network clustering은 그래프 이론에서 다루는 분야이다.
@@ -72,7 +72,7 @@ Pyani/clustering
   - 선택한 알고리즘
     - 지역조사 알고리즘중 가장 대표적인 Louvain, 가장 진보된 Leiden을 선택했고 길찾기 알고리즘중 가장 대표적인 MCL을 선택했다.
 
-#### 2. clustering 결과
+#### 2. Clustering 결과
 <br/>
 
 |trial|score|Cluster algorithm|Cluster parameter|Ligilactobacillus|Lacticaseibacillus|Lactiplantibacillus|Lactococcus|Limosilactobacillus|
