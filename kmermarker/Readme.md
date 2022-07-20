@@ -17,6 +17,7 @@ genome상에서 특징적인 k-mer marker 찾기
   - Jellyfish command
     - k-mer count : jellyfish count -m 24 -o (output) -s 100M -t 16 -C (input)
     - dump(jf > fasta) : jellyfish dump A.jf > A.fasta
+    - input/output example (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Jellyfish/example)
   
 <br/>
 
@@ -24,9 +25,9 @@ genome상에서 특징적인 k-mer marker 찾기
 
   - Jellyfish는 여러 genome에 존재하는 k-mer를 비교해주는 기능이 없음.
   - 따라서 다른 genome의 k-mer를 비교하기 위해서는 알고리즘을 짜야 함.
-<br/>
 
-##### 1) Jellyfish output을 이용한 k-mer 비교  
+##### 1) Jellyfish output을 이용한 k-mer 비교
+  - 비교 알고리즘 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Jellyfish/counting)
   - Jellyfish output 또한 k길이의 서열들로 이루어진 fasta format 파일임.
   - Jellyfish output file에 jellyfish를 다시 진행하고, output으로 나온 .jf파일들을 merge 기능을 이용해 합침.
   - 합친 .jf 파일을 dump 하고 등장횟수에 따라 sorting.
@@ -55,6 +56,7 @@ genome상에서 특징적인 k-mer marker 찾기
       - 중복 문제는 open hashing, closed hashing을 이용해 해결 가능함.
   
   - k-mer counting algorithm
+    - (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Jellyfish/hashing)
     - hash table의 칸이 많아질수록 충돌 확률이 낮아지므로 계산 속도가 빨라짐.
     - 따라서 hash table 한 칸의 크기는 최대한 줄여야 함.
     - k-mer sequence는 A,T,G,C의 네 염기만으로 이루어져 있고, 네 염기에 00,01,10,11을 할당 가능함.
@@ -80,7 +82,6 @@ genome상에서 특징적인 k-mer marker 찾기
     - data.pheno에는 Phenotypeseeker에 사용할 파일들의 정보를 적어준다.      
       - SampleID, 경로와위치, 표현형의유무(1,0)
       - input file들의 형식은 fasta 또는 fastq
-<br/>
 
   - modeling subcommands
 <br/>
@@ -99,6 +100,7 @@ genome상에서 특징적인 k-mer marker 찾기
 <br/>
 
 ### Phenotypeseeker 결과
+  - 데이터 셋 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Phenotypeseeker)
 
 ##### 1) testset1
   - Phenotype1 : _Streptococcus thermophilus_ 5 genome (Probiotics 고시형 균주)
