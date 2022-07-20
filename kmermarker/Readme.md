@@ -100,16 +100,34 @@ genome상에서 특징적인 k-mer marker 찾기
 
 ### Phenotypeseeker 결과
 
+##### 1) testset1
+  - Phenotype1 : _Streptococcus thermophilus_ 5 genome (Probiotics 고시형 균주)
+  - Phenotype2 : Other _Streptococcus_ 15 genome (Probiotics 고시형 균주가 아닌 균주)
+  - subcommand : -l 24
+  - 결과
+    - Phenotypeseeker modeling에 실패
 
-##### 1) testset 2
+##### 2) testset 2
   - Phenotype 1 : _Streptococcus thermophilus_ 15 genome (Probiotics 고시형 균주)
   - Phenotype 0 : Other _Streptococcus_ 44 genome (Probiotics 고시형 균주가 아닌 균주)
   - subcommand : -l 24 
   - 결과
-    - 
+    - 학습된 모델로 재예측한 결과와 실제 결과가 일치.
+      - _S. thermophilus_ 와 other _Streptococcus_ 를 제대로 구분.
+    - Phenotypeseeker에서 _S. thermophilus_ 와 관련있다고 판단한 sequence를 직접 genome에 대입
+      - _S. thermophilus_ genome에서는 해당 sequence가 존재했음.
+      - Other _Streptococcus_ genome에서는 해당 sequence가 존재하지 않았음.
+    - 관련성이 높다고 예측된 sequence들
+      - TTCAACCGCATCACCTGTTGCCAA (log coefficient 0.50)
+      - CTAAAGGTGCACAACCTTCAGATA (log coefficient 0.31)
+      - GGCTAAGGAATTTTCAAAAATCAC (log coefficient 0.29)
+      - AATCAGCAACACGGCTCTTGATTG (log coefficient 0.23)
+    - 관련성이 있다고 뽑힌 1000개의 sequence들이 모두 5 genome에서 각각 한번만 등장했음.
+      - 대부분의 sequence들의 coefficient가 0.00인 이유?
+      - 몇몇 sequence들만 coefficient가 높은 이유?
 <br/>
 
-##### 2) testset 3
+##### 3) testset 3
   - Phenotype 1 : _Streptococcus thermophilus_ 5 genome (Probiotics 고시형 균주)
   - Phenotype 0 : _Bifidobacterium_ 43 genome (Probiotics 고시형 균주가 아닌 균주)
   - subcommand : -l 24
@@ -124,7 +142,7 @@ genome상에서 특징적인 k-mer marker 찾기
     - 두 번의 시행에서, 1000개 cut off 안에 들어간 k-mer들이 달랐음.
 <br/>
 
-##### 3) testset 4
+##### 4) testset 4
   - Phenotype 1 : _Lactococcus Lactis_ 202 genome (Probiotics 고시형 균주)
   - Phenotype 0 : Other _Lactococcus_ 212 genome (Probiotics 고시형 균주가 아닌 균주)
   - subcommand : -l 24
@@ -143,4 +161,6 @@ genome상에서 특징적인 k-mer marker 찾기
   - k값이 너무 커지면, 대부분의 k-mer가 1번 등장하고 이 경우 제대로 된 modeling이 되지 않음.
     - Phenotypeseeker는 logistic regression model 학습을 사용.
     - 학습 과정에서, 대부분의 k-mer가 1회 등장하면 가중치가 제대로 설정되지 않고 결과도 제대로 출력되지 않음.
+    - k값이 클떄, genome 수가 적으면 p-value 검정단계가 제대로 작동하지 않는 것으로 추측.
+    - k값이 클때, genome 수가 많으면 조건에 맞는 k-mer를 찾기 힘든 것으로 추측.
   - 결론적으로, Phenotypeseeker는 어떤 k-mer가 더 표현형과 관련있는지 오직 등장횟수만으로 판단함.
