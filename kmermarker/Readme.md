@@ -128,10 +128,11 @@ genome상에서 특징적인 k-mer marker 찾기
 <br/>
 
 ##### 3) testset 3
-  - Phenotype 1 : _Streptococcus thermophilus_ 5 genome (Probiotics 고시형 균주)
-  - Phenotype 0 : _Bifidobacterium_ 43 genome (Probiotics 고시형 균주가 아닌 균주)
+  - Phenotype 1 : _Streptococcus thermophilus_ 5 cda genomic fna (Probiotics 고시형 균주)
+  - Phenotype 0 : _Bifidobacterium_ 43 cds genomic fna (Probiotics 고시형 균주가 아닌 균주)
   - subcommand : -l 24
   - 특이사항 : 2회 반복
+  - cds genomic fna는 genome 중 protein coding region sequence 만을 뽑아낸 파일.
   - 결과
     - 정상적으로 결과가 출력됨
     - _S. thermophhilus_ 5 genome을 표현형 1로 맞게 예측.
