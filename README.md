@@ -3,28 +3,27 @@
 목차
 ----------------------------
 ### 1. 연구의 목적과 배경
-<br/>
+<br/><br/>
 
 ### 2. Probiotics 균주 유전자 데이터 수집
-<br/>
+<br/><br/>
 
 ### 3. Probiotics ingroup/outgroup marker kmer 찾기
 #### 3-1. tool 선택
 #### 3-2. tool : Jellyfish
 #### 3-3. tool : Phenotypeseeker
-<br/>
+<br/><br/>
 
 ### 4. Probiotics ingroup/outgroup marker 유전자 찾기
 #### 4-1. tool 선택
 #### 4-2. tool : Neptune
 #### 4-3. tool : Scoary/Roary
-<br/>
+<br/><br/>
 
 ### 5. Non redundant genome set 만들기
 #### 5-1. tool : Pyani
 #### 5-2. tool : Network clustring algorithms
-
-<br/>  
+<br/><br/>
   
 ## 1. 연구의 목적과 배경
 1. 건강에 대한 사회적 관심이 증가하면서 건강기능식품의 소비가 증가
@@ -35,8 +34,7 @@
 ***
 - 식약처 고시형 균주인 9속 19종 probiotics를 target으로 함.
 - 19종 균주와 다른 균주를 구분지을수 있는 genetic marker를 찾는것이 목표
-<br/>
-<br/>
+<br/<br/>
 
 ## 2. Probiotics 균주 유전자 데이터 수집
 
@@ -47,6 +45,7 @@
     - 8속의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
     - _Streptococcus_ 에 대해서는 고시형 균주에 속하는 _S.thermophilus_ 만 모든 유전체를 수집
     - 다른 _Streptococcus_ species들은 representative genome만 수집
+<br/>
 
 #### 수집 결과 - data (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
 
@@ -56,7 +55,6 @@
 
 ## 3. Probiotics marker kmer 찾기
 ### 3-1. tool : Jellyfish
-<br/>
 
 1. Jellyfish란?
   - Jellyfish github (https://github.com/gmarcais/Jellyfish)
@@ -72,10 +70,9 @@
     - 여러 genome을 input으로 받고, ingroup에서는 존재하지만 outgroup에선 존재하지 않는 sequence를 찾는 알고리즘.
     - 약 50% 정도 완성됨.
 
-<br/><br/>
+<br/>
 
 ### 3-2. tool : Phenotypeseeker
-<br/>
 
 1. Phenotypeseeker란?
   - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
@@ -92,10 +89,9 @@
   - Phenotype 1과 0 genome들 사이의 근연 관계가 가까울수록, 조건을 만족하는 k-mer의 수가 줄어듬.  
   - 같은 속에서, genome이 너무 많거나 적은 경우(200개 이상, 30개 이하) 작동하지 않음.
   
-<br/><br/>
+<br/><br/><br/>
 
 ## 4. Probiotics marker 유전자 찾기
-<br/>
 
 ### 4-1. tool 선택하기
 1. 여러 개의 genome 상에서 서열이나 유전자들을 비교하는 많은 tool들이 지난 수십년간 개발되었음.
@@ -155,7 +151,7 @@
   - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
     - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
     - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
-<br/><br/>
+<br/><br/><br/>
 
 ## 5. Probiotics non redundent set 제작
  - Non redundent set page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
@@ -163,7 +159,7 @@
  - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
  - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
  - 중복되는 genome들을 제외시키면서 총 genome의 수를 줄이고 효율성을 높일 필요성이 있음
-<br/>
+<br/><br/>
 
 ### 5-1. tool : Pyani
  - Pyani는 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
