@@ -125,7 +125,7 @@ genome상에서 특징적인 k-mer marker 찾기
     - 관련성이 있다고 뽑힌 1000개의 sequence들이 모두 5 genome에서 각각 한번만 등장했음.
       - 대부분의 sequence들의 coefficient가 0.00인 이유?
       - 몇몇 sequence들만 coefficient가 높은 이유?
-<br/>
+
 
 ##### 3) testset 3
   - Phenotype 1 : _Streptococcus thermophilus_ 5 cda genomic fna (Probiotics 고시형 균주)
@@ -141,7 +141,7 @@ genome상에서 특징적인 k-mer marker 찾기
   - 문제점
     - 두 번의 시행에서, logistic regression modeling을 통해 학습된 k-mer coefficient value가 다름.
     - 두 번의 시행에서, 1000개 cut off 안에 들어간 k-mer들이 달랐음.
-<br/>
+
 
 ##### 4) testset 4
   - Phenotype 1 : _Lactococcus Lactis_ 202 genome (Probiotics 고시형 균주)
@@ -149,13 +149,12 @@ genome상에서 특징적인 k-mer marker 찾기
   - subcommand : -l 24
   - 결과
     - Phenotypeseeker modeling 실패
-<br/>
+
 
 ##### 4) 최종 결과
   - genome 수가 많아질수록, 조건에 맞는 k-mer가 줄어드므로 일정 수 이상의 genome에서는 k-mer를 찾지 못함.
   - 비교군과 대조군의 근연관계가 가까울수록 genome sequence의 유사도가 높아 k-mer를 찾기 힘들어짐.
     - sequence 유사도가 높으면 공유하는 k-mer도 많아지므로 조건을 만족하는 k-mer의 수도 줄어듦.
-<br/>
 
 ##### 5) Phenotypeseeker의 단점
   - 표현형과 관련성이 확실하고, unique한 k-mer를 찾기 위해서는 k값이 어느정도 커야 함.
