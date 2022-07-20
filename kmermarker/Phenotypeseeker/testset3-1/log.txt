@@ -1,0 +1,2 @@
+Func <function phenotypes.test_kmers_association_with_phenotype at 0x7f786faee730> took 211.51815557479858 secs
+Func <function phenotypes.get_ML_df at 0x7f786faf1048> took 8.488824605941772 secs
