@@ -75,8 +75,6 @@
 ### 3-2. tool : Phenotypeseeker
 <br/>
 
-(여기에 phenotypeseeker 링크 달예정)
-
 1. phenotypeseeker란?
   - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
   - k-mer를 이용하여 특정 genome에서 나타날 표현형을 예측하는 알고리즘.
@@ -85,7 +83,13 @@
 <br/>
 
 2. Phenotypeseeker 결과
-  - 
+  - marker로서 기능할 수 있는 unique한 k-mer를 찾는 것이므로, k 길이를 24로 길게 설정
+  - k값이 커지면, 거의 모든 sequence가 한 번씩만 등장하게 됨.
+    - genome이 적으면 p-value가 커져 조건을 만족하는 k-mer의 수가 줄어듬.
+    - genome이 많으면 Phenotype 1에선 모두 존재하고 0에선 존재하지 않는 k-mer의 수가 줄어듬.
+  - Phenotype 1과 0 genome들 사이의 근연 관계가 가까울수록, 조건을 만족하는 k-mer의 수가 줄어듬.  
+  - 따라서 같은 속에서, genome이 너무 많거나 적은 경우(200개 이상, 30개 이하) 작동하지 않음.
+  
 <br/><br/>
 
 ## 4. Probiotics marker 유전자 찾기
