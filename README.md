@@ -35,7 +35,7 @@
 - 식약처 고시형 균주인 9속 19종 probiotics를 target으로 함.
 - 19종 균주와 다른 균주를 구분지을수 있는 genetic marker를 찾는것이 목표
 
-<br/<br/>
+<br/><br/>
 
 ## 2. Probiotics 균주 유전자 데이터 수집
 
