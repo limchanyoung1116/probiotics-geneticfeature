@@ -3,24 +3,26 @@
 목차
 ----------------------------
 ### 1. 연구의 목적과 배경
-### 2. probiotics 균주 유전자 데이터 수집
-### 3. probiotics ingroup/outgroup marker kmer 찾기
-#### 3-1. tool 선택
-#### 3-2. tool : jellyfish
-#### 3-3. tool : phenotypeseeker
+<br/>
 
-### 4. probiotics ingroup/outgroup marker 유전자 찾기
+### 2. Probiotics 균주 유전자 데이터 수집
+<br/>
+
+### 3. Probiotics ingroup/outgroup marker kmer 찾기
+#### 3-1. tool 선택
+#### 3-2. tool : Jellyfish
+#### 3-3. tool : Phenotypeseeker
+<br/>
+
+### 4. Probiotics ingroup/outgroup marker 유전자 찾기
 #### 4-1. tool 선택
 #### 4-2. tool : Neptune
 #### 4-3. tool : Scoary/Roary
+<br/>
 
-### 5. Genome에 유전자/서열 mapping
-#### 5-1. Neptune 결과 mapping
-#### 5-2. Scoary 결과 mapping
-
-### 6. non redundant genome set 만들기
-#### 6-1. tool : pyani
-#### 6-2. tool : network clustring algorithms
+### 5. Non redundant genome set 만들기
+#### 5-1. tool : Pyani
+#### 5-2. tool : Network clustring algorithms
 
 <br/>  
   
@@ -28,7 +30,7 @@
 1. 건강에 대한 사회적 관심이 증가하면서 건강기능식품의 소비가 증가
     - 유산균에 대한 수요도 증가하면서 이를 활용한 제품들이 다양하게 출시됨
     - 유산균 제품에 실제로 해당 유산균이 존재하는지 쉽고 빠르게 확인가능한 marker
-2. probiotics만이 갖는, 다른 세균들과는 다른 특징적인 유전자 영역 찾기
+2. Probiotics만이 갖는, 다른 세균들과는 다른 특징적인 유전자 영역 찾기
 
 ***
 - 식약처 고시형 균주인 9속 19종 probiotics를 target으로 함.
@@ -36,7 +38,7 @@
 <br/>
 <br/>
 
-## 2. probiotics 균주 유전자 데이터 수집
+## 2. Probiotics 균주 유전자 데이터 수집
 
 #### 수집 범위
 
@@ -52,8 +54,8 @@
 
 <br/> <br/>
 
-## 3. probiotics marker kmer 찾기
-### 3-1. tool : jellyfish
+## 3. Probiotics marker kmer 찾기
+### 3-1. tool : Jellyfish
 <br/>
 
 1. Jellyfish란?
@@ -75,7 +77,7 @@
 ### 3-2. tool : Phenotypeseeker
 <br/>
 
-1. phenotypeseeker란?
+1. Phenotypeseeker란?
   - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
   - k-mer를 이용하여 특정 genome에서 나타날 표현형을 예측하는 알고리즘.
     - 주어진 genome들에서 나타나는 k-mer들을 모두 기록.
@@ -88,7 +90,7 @@
     - genome이 적으면 p-value가 커져 조건을 만족하는 k-mer의 수가 줄어듬.
     - genome이 많으면 Phenotype 1에선 모두 존재하고 0에선 존재하지 않는 k-mer의 수가 줄어듬.
   - Phenotype 1과 0 genome들 사이의 근연 관계가 가까울수록, 조건을 만족하는 k-mer의 수가 줄어듬.  
-  - 따라서 같은 속에서, genome이 너무 많거나 적은 경우(200개 이상, 30개 이하) 작동하지 않음.
+  - 같은 속에서, genome이 너무 많거나 적은 경우(200개 이상, 30개 이하) 작동하지 않음.
   
 <br/><br/>
 
@@ -107,16 +109,16 @@
     - k-mer 기반 알고리즘은 이미 Neptune을 선택했기 때문에 제외.
     - TreeWAS, BugWAS, Scoary, Seer, Pyseer 프로그램이 위 조건을 만족.
     - BugWAS는 TreeWAS의 파생 프로그램이고, Pyseer는 Seer의 파이썬 버전 프로그램이므로 통합.
-    - 이들 중 파이썬으로 구동되고, 최근까지 많은 논문에서 인용된 Scoary를 먼저 사용하기로 선택(피인용수 350).    
+    - 셋 중 파이썬으로 구동되고, 최근까지 많은 논문에서 인용된 Scoary를 먼저 사용하기로 선택(피인용수 350).    
 <br/>
 
 ### 4-2. Neptune
 1. Neptune이란?
   - Neptune github(https://github.com/phac-nml/neptune)
   - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
-  - bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
-  - inclusion group과 exclusion group을 설정
-  - inclusion group들에서는 존재하지만 exclusion group에서는 존재하지 않는 genomic locus를 찾는다
+  - Bacteria에서 유전적 차이를 빠르게 찾기 위한 tool.
+  - Inclusion group과 exclusion group을 설정
+  - Inclusion group들에서는 존재하지만 exclusion group에서는 존재하지 않는 genomic locus를 찾는다
   - k-mer를 기준으로 일치도를 판단하며 blastn을 이용해 두 서열을 비교한다.
 <br/>
 
@@ -124,17 +126,17 @@
   - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
   - k-mer의 길이가 길어질수록, 찾는 서열의 수는 줄어들고 길이는 길어짐.
   - k = 19 이하에서보다 k = 22 이상에서 서열의 평균 score가 높음.
-  - score > 0.9인 정확도가 높은 서열의 비율은 k길이에 관계없이 비슷함.
+  - Score > 0.9인 정확도가 높은 서열의 비율은 k길이에 관계없이 비슷함.
   - 같은 속의 genome 100개, k = 23까지는 결과가 출력되었으나 genome 400개, k = 23 부터는 결과가 출력되지 않음.
 <br/>
 
 3. IGV mapping
   - IGV(Integraged genome viewer) article (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346182/)
   - IGV는 genome 상에 mapping된 sequence나 gene을 시각화해 주는 tool임.
-  - toyset1 output mapping 결과
+  - Toyset1 output mapping 결과
     - k=16은 k=19, k=22, k=25, k=28과 다른 위치에 mapping되는 경우가 잦았음.
     - k=16을 제외한 네 output은 같은 위치에 mapping되는 경우가 많았고, k 길이가 길수록 더 넓은 구간에 mapping됨.
-    - gene 뿐만 아니라 gene upstream region, intergenic region에도 sequence가 mapping되었음.
+    - Gene 뿐만 아니라 gene upstream region, intergenic region에도 sequence가 mapping되었음.
   - IGV 결과를 바탕으로, toyset1 output의 sequence와 gff 파일의 gene을 연결짓는 알고리즘을 만들었음.
 <br/>
 
@@ -155,27 +157,27 @@
     - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
 <br/><br/>
 
-## 6. Probiotics non redundent set 제작
- - non redundent set page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
+## 5. Probiotics non redundent set 제작
+ - Non redundent set page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
 #### Non redundent set의 필요성
  - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
  - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
  - 중복되는 genome들을 제외시키면서 총 genome의 수를 줄이고 효율성을 높일 필요성이 있음
 <br/>
 
-### 6-1. tool : Pyani
- - pyani는 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
+### 5-1. tool : Pyani
+ - Pyani는 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
  - 수집한 9속의 genome중, 이미 representative로 압축된 Streptococcus를 제외한 8속에 대해 속별로 pyani 진행
- - pyani의 output을 시각화하는 방법으로 R의 pheatmap package를 선택
- - pheatmap은 2차원 표에서 색깔의 차이로 genome들 사이의 identity 점수를 시각화해주고, 추정되는 계통도를 각 변에 그려줌
- - pyani output data page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/Pyani)
+ - Pyani의 output을 시각화하는 방법으로 R의 pheatmap package를 선택
+ - Pheatmap은 2차원 표에서 색깔의 차이로 genome들 사이의 identity 점수를 시각화해주고, 추정되는 계통도를 각 변에 그려줌
+ - Pyani output data page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/Pyani)
  <br/>
  
-### 6-2. tool : network clustering algorithm
+### 5-2. tool : Network clustering algorithm
 #### 사용한 알고리즘 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/clustering)
- - pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
+ - Pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
  - 많은 알고리즘들 중 Leiden, Louvain, MCL을 선택
- - cut off를 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999 7가지로 잡고 진행. 
+ - Cut off를 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999 7가지로 잡고 진행. 
 <br/>
 
 #### 결과
