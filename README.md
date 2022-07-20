@@ -54,21 +54,28 @@
 <br/> <br/>
 
 ## 3. Probiotics marker kmer 찾기
+
+  - 데이터셋, 상세결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
+<br/>
+
 ### 3-1. tool : Jellyfish
 
 1. Jellyfish란?
   - Jellyfish github (https://github.com/gmarcais/Jellyfish)
   - 주어진 sequence에 존재하는 모든 k-mer들을 빠르게 counting해주는 프로그램.
   - 원하는 k 길이는 선택 가능하나, k 길이가 길어질수록 작업시간이 길어지고 output 파일이 커짐.
+  - input/output file 예시 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Jellyfish/example)
 <br/>
 
 2. k-mer compare
   - Jellyfish는 sequence의 k-mer의 counting 기능만 제공함.
     - 다른 sequence의 k-mer를 비교하거나, 여러 파일의 k-mer를 같이 counting하려면 알고리즘을 짜야 함.
   - Jellyfish output을 읽고 연속적으로 k-mer를 count하는 알고리즘.
+    - (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Jellyfish/counting)
   - Jellyfish를 이용하지 않는 방법
     - 여러 genome을 input으로 받고, ingroup에서는 존재하지만 outgroup에선 존재하지 않는 sequence를 찾는 알고리즘.
     - 약 50% 정도 완성됨.
+    - (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Jellyfish/hashing)
 
 <br/>
 
@@ -82,6 +89,8 @@
 <br/>
 
 2. Phenotypeseeker 결과
+  - 데이터셋 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Phenotypeseeker)
+  - 상세 진행과정/결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
   - marker로서 기능할 수 있는 unique한 k-mer를 찾는 것이므로, k 길이를 24로 길게 설정
   - k값이 커지면, 거의 모든 sequence가 한 번씩만 등장하게 됨.
     - genome이 적으면 p-value가 커져 조건을 만족하는 k-mer의 수가 줄어듬.
