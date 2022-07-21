@@ -80,7 +80,6 @@ Probiotics Scoary data/result
   - 총 1,739개의 gene이 _S.thermophilus_ 와 다른 _Streptococcus_ 에서 다른 분포를 보인다고 나타났음.
   - 총 502개의 gene이 _S. thermophilus_ 6개 genome 모두에 존재하고, 다른 _Streptococcus_ 20개 genome에서는 모두 존재하지 않았음.
     - 이는 Roary 결과에서 6개 이상의 genome에 존재했던 gene의 수(1,380개)의 약 36%에 해당하는 수치임.
-    - 502개의 gene 중에는 열저항성에 관련된 유전자들의 비율이 높았음.
 <br/>
 
 #### 3. 발견된 특이한 gene들
@@ -94,3 +93,4 @@ Probiotics Scoary data/result
 - hypothetical protein
   - hypothetical protein은 어떤 기능을 하는지, 실제로 발현이 되는지 밝혀지지 않은 protein임.
   - 1,739개의 gene중 10%를 넘는 238개의 gene이 hypothetical protein을 coding하는 gene임.
+- CRISPER associated endonuclease
