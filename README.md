@@ -38,7 +38,7 @@
 <br/><br/>
 
 ## 2. Probiotics 균주 유전자 데이터 수집
-#### [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
+###   - [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
 <br/>
 
 #### 수집 범위
@@ -54,7 +54,7 @@
 <br/> <br/>
 
 ## 3. 특정 probiotics group의 specific marker 탐색 : k-mer
-#### [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
+###   - [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
 <br/>
 
 ### 3-1. Tool : Jellyfish
@@ -79,7 +79,7 @@
 <br/>
 
 ### 3-2. tool : Phenotypeseeker
-#### [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Phenotypeseeker), [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
+###    - [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Phenotypeseeker), [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
 
 1. Phenotypeseeker란?
   - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
@@ -116,7 +116,7 @@
 <br/>
 
 ### 4-2. Neptune
-#### [dataset/detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
+###   - [dataset/detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
 1. Neptune이란?
   - Neptune github(https://github.com/phac-nml/neptune)
   - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
@@ -144,7 +144,7 @@
 <br/>
 
 ### 4-3. Scoary
-#### [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
+###   - [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
 1. Scoary란?
   - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
   - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
@@ -162,7 +162,7 @@
 <br/><br/>
 
 ## 5. Probiotics non redundent set 제작
- - [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
+###     - [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
 #### Non redundent set의 필요성
  - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
  - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
