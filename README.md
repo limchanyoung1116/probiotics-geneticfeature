@@ -3,27 +3,27 @@
 목차
 ----------------------------
 ### 1. 연구의 목적과 배경
-<br/><br/>
+<br/>
 
-### 2. Probiotics 균주 유전자 데이터 수집
-<br/><br/>
+### 2. Probiotics 균주 유전체 데이터 수집
+<br/>
 
-### 3. Probiotics ingroup/outgroup marker kmer 찾기
-#### 3-1. tool 선택
-#### 3-2. tool : Jellyfish
-#### 3-3. tool : Phenotypeseeker
-<br/><br/>
+### 3. 특정 probiotics group의 specific marker 탐색 : k-mer
+#### 3-1. 탐색 도구 비교
+#### 3-2. Tool : Jellyfish
+#### 3-3. Tool : Phenotypeseeker
+<br/>
 
-### 4. Probiotics ingroup/outgroup marker 유전자 찾기
-#### 4-1. tool 선택
-#### 4-2. tool : Neptune
-#### 4-3. tool : Scoary/Roary
-<br/><br/>
+### 4. 특정 probiotics group의 specific marker 탐색 : gene
+#### 4-1. 탐색 도구 비교
+#### 4-2. Tool : Neptune
+#### 4-3. Tool : Scoary/Roary
+<br/
 
 ### 5. Non redundant genome set 만들기
-#### 5-1. tool : Pyani
-#### 5-2. tool : Network clustring algorithms
-<br/><br/>
+#### 5-1. Tool : Pyani
+#### 5-2. Tool : Network clustring algorithms
+<br/>
   
 ## 1. 연구의 목적과 배경
 1. 건강에 대한 사회적 관심이 증가하면서 건강기능식품의 소비가 증가
@@ -33,32 +33,31 @@
 
 ***
 - 식약처 고시형 균주인 9속 19종 probiotics를 target으로 함.
-- 19종 균주와 다른 균주를 구분지을수 있는 genetic marker를 찾는것이 목표
+- 9속, 19종 균주에 대해 specific marker를 찾는 것이 목표
 
 <br/><br/>
 
 ## 2. Probiotics 균주 유전자 데이터 수집
+#### [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
+<br/>
 
 #### 수집 범위
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
 2. 총 9속에 대해서 NCBI taxid를 기준으로 함  
-    - 8속의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
-    - _Streptococcus_ 에 대해서는 고시형 균주에 속하는 _S.thermophilus_ 만 모든 유전체를 수집
+    - _S. thermophilus를 제외한 8속의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
+    - _Streptococcus_ 에 대해서는 고시형 균주에 속하는 _S. thermophilus_ 만 모든 유전체를 수집
     - 다른 _Streptococcus_ species들은 representative genome만 수집
-
-#### 수집 결과 - data (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/genome)
 
 3. 총 11,489개의 genome data를 수집 
 
 <br/> <br/>
 
-## 3. Probiotics marker kmer 찾기
-
-  - 데이터셋, 상세결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
+## 3. 특정 probiotics group의 specific marker 탐색 : k-mer
+#### [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
 <br/>
 
-### 3-1. tool : Jellyfish
+### 3-1. Tool : Jellyfish
 
 1. Jellyfish란?
   - Jellyfish github (https://github.com/gmarcais/Jellyfish)
@@ -80,6 +79,7 @@
 <br/>
 
 ### 3-2. tool : Phenotypeseeker
+#### [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Phenotypeseeker), [detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
 
 1. Phenotypeseeker란?
   - Phenotypeseeker github (https://github.com/bioinfo-ut/PhenotypeSeeker)
@@ -89,8 +89,6 @@
 <br/>
 
 2. Phenotypeseeker 결과
-  - 데이터셋 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker/Phenotypeseeker)
-  - 상세 진행과정/결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/kmermarker)
   - marker로서 기능할 수 있는 unique한 k-mer를 찾는 것이므로, k 길이를 24로 길게 설정
   - k값이 커지면, 거의 모든 sequence가 한 번씩만 등장하게 됨.
     - genome이 적으면 p-value가 커져 조건을 만족하는 k-mer의 수가 줄어듬.
@@ -98,9 +96,9 @@
   - Phenotype 1과 0 genome들 사이의 근연 관계가 가까울수록, 조건을 만족하는 k-mer의 수가 줄어듬.  
   - 같은 속에서, genome이 너무 많거나 적은 경우(200개 이상, 30개 이하) 작동하지 않음.
   
-<br/><br/><br/>
+<br/><br/>
 
-## 4. Probiotics marker 유전자 찾기
+## 4. 특정 probiotics group의 specific marker 탐색 : gene
 
 ### 4-1. tool 선택하기
 1. 여러 개의 genome 상에서 서열이나 유전자들을 비교하는 많은 tool들이 지난 수십년간 개발되었음.
@@ -118,6 +116,7 @@
 <br/>
 
 ### 4-2. Neptune
+#### [dataset/detailed result](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
 1. Neptune이란?
   - Neptune github(https://github.com/phac-nml/neptune)
   - Neptune article NCBI(https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5737611/)
@@ -128,7 +127,6 @@
 <br/>
 
 2. Neptune 결과
-  - 데이터셋, 상세 결과 (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune)
   - k-mer의 길이가 길어질수록, 찾는 서열의 수는 줄어들고 길이는 길어짐.
   - k = 19 이하에서보다 k = 22 이상에서 서열의 평균 score가 높음.
   - Score > 0.9인 정확도가 높은 서열의 비율은 k길이에 관계없이 비슷함.
@@ -146,6 +144,7 @@
 <br/>
 
 ### 4-3. Scoary
+#### [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
 1. Scoary란?
   - Genome 상에서 Gene의 존재 여부와 Phenotype과의 관계를 찾아내어 상관관계를 나타내주는 프로그램
   - Input file으로 Genome 별로 Gene presence/absence 여부가 1,0 으로 적힌 csv 파일, 표현형 csv파일이 필요
@@ -153,17 +152,17 @@
   - Scoary github(https://github.com/AdmiralenOla/Scoary)
 <br/>
 
-2. Roary/Scoary result - data (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/RoaryScoary)
+2. Roary/Scoary result
   - Neptune과 결과를 비교하기 위해 Neptune의 toyset1과 같은 set을 사용
   - Roary 결과 26개 _Streptococcus_ genome set에 총 35,410개의 gene이 존재
     - 22개의 gene은 26개 genome 모두에 존재했고, 약 31,400개의 gene은 genome 하나에서만 존재했음.
   - Scoary 결과 35,410개의 gene중 1,739개의 gene이 _Streptococcus thermophilus_ 와 다른 _Streptococcus_ 사이의 차이와 관련 있다고 나타났음.
     - 1,739개 gene중 502개의 gene은 _S. thermophilus_ set 에서는 모두 존재하고, 다른 _Streptococcus_ set 에서는 전혀 존재하지 않았음.
     - 502개의 gene은 _S. thermophilus_ 와 다른 _Streptococcus_ 의 차이를 만들어내는 중요한 gene이라고 추측할 수 있음.
-<br/><br/><br/>
+<br/><br/>
 
 ## 5. Probiotics non redundent set 제작
- - Non redundent set page (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
+ - [dataset](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset)
 #### Non redundent set의 필요성
  - 수집한 genome의 수는 약 11,000개이며 Enterococcus에 속하는 genome만 약 6,000개임
  - 같은 종이나 아종 내에서 수집된 genome들이 많고, 따라서 대부분의 서열이 같은 중복되는 genome도 많음
@@ -179,8 +178,7 @@
  <br/>
  
 ### 5-2. tool : Network clustering algorithm
- - Clustering algorithm 결과물 group 수 세기 
-   - (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/clustering)
+#### [Clustering algorithm grouping](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/clustering)
  - Pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
  - 많은 알고리즘들 중 Leiden, Louvain, MCL을 선택
  - Cut off를 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999 7가지로 잡고 진행. 
