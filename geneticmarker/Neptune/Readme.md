@@ -19,7 +19,7 @@ Neptune
 <br/>
 
   1) Blastn을 이용해 각 genome에서 어떤 k-mer가 몇 번 나타나는지 세고 txt파일로 저장.
-  - reverse complement sequence는 한 서열로 통합.
+    - reverse complement sequence는 한 서열로 통합.
   2) Inclusion group에서는 일정횟수 이상 등장하고, exclusion group에서는 등장 횟수가 적은 k-mer를 찾아 점수를 매김.
   3) 조건을 만족하는 k-mer들로 reference sequence를 만드는데, 이 때 k-mer들이 붙어 있다면 하나의 sequence로 합침.
   4) 만들어진 reference sequence가 일정 길이 이상이라면, matching score와 length, sequence를 기록함.
@@ -43,15 +43,15 @@ Neptune
   
 2) toyset 2
     
-  - inclusion : Lactococcus lactis 201개 genome 전체
-  - exclusion : L.lactis를 제외한 Lactococcus 211개 genome 전체
+  - inclusion : _Lactococcus lactis_ 201개 genome 전체
+  - exclusion : _L.lactis_ 를 제외한 _Lactococcus_ 211개 genome 전체
   - k = 23
   - Neptune으로 어느정도 크기의 ingroup/outgroup까지 작업이 가능한지 확인.
 
 3) toyset 3
 
-  - inclusion : Lactococcus lactis 201개 genome중 20개
-  - exclusion : L.lactis를 제외한 Lactococcus 211개 genome중 80개
+  - inclusion : _Lactococcus lactis_ 201개 genome중 20개
+  - exclusion : _L.lactis_ 를 제외한 _Lactococcus_ 211개 genome중 80개
   - k = 23
   - Neptune으로 어느정도 크기의 ingroup/outgroup까지 작업이 가능한지 확인.
   <br/>
@@ -150,4 +150,5 @@ Neptune
   - Neptune output을 .bed file로 만들고 _S. thermophilus_ representative genome .gff file과 matching.
   - bedtools output .gff file의 gene들을 clustering 하는 알고리즘
     - 일정 bp 내에 있는 gene들을 하나의 cluster로 묶는다.
-    - 알고리즘과 input/output (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune/IGVfiles/clustering)
+    - 알고리즘과 input/output 
+      - (https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune/IGVfiles/clustering)
