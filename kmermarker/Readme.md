@@ -13,7 +13,7 @@ genome상에서 특징적인 k-mer marker 찾기
   - Jellyfish는 주어진 genome sequence에 존재하는 모든 k-mer를 빠르게 세는 프로그램.
   - .fna와 같은 fasta file을 input으로 받고 가능한 k-mer를 모두 count함.
   - count의 output은 .jf 파일인데, dump를 통해 fasta 형식의 파일로 바꿀 수 있음.
-  - Python3을 지원하지 않는 프로그램이므로, conda를 이용하거나 Python2.7 설치 (마지막 버전 2019.7.13)
+  - Python3을 지원하지 않는 프로그램이므로, conda를 이용하거나 Python2.7 설치
   - Jellyfish command
     - k-mer count : jellyfish count -m 24 -o (output) -s 100M -t 16 -C (input)
     - dump(jf > fasta) : jellyfish dump A.jf > A.fasta
@@ -35,14 +35,14 @@ genome상에서 특징적인 k-mer marker 찾기
 
 ##### 2) hashing function을 이용한 k-mer 비교 알고리즘
   - hashing이란?
-    - 특정한 규칙에 의해 key의 할당위치가 정해지는 dictionary의 일종.
-    - 주어진 문자열이나 숫자에 특정한 규칙에 따른 list/array 상의 위치를 할당.
+    - 특정한 규칙에 의해 key를 변환시킨 값으로 list/array에서 할당위치가 정해지는 dictionary의 일종.
+    - reversible, irreversible 두 가지 방식이 있으며, irreversible한 hashing은 암호화에 사용.
     - input 문자열이나 숫자는 key, list/array 상의 위치(주소)는 value인 dictionary.
   
-  - k-mer counting에서 hashing의 활용
+  - k-mer counting에서의 계산 복잡도
     - k-mer를 셀 때 특정한 k-mer가 반복해서 등장한다면 이를 확인할 수 있어야 함.
     - n개의 k-mer중에서 특정 k-mer를 찾으려면, 평균적으로 n/2번 찾아야 함.
-    - k-mer를 알파벳 순서로 sorting 하는 경우, 새로운 k-mer를 찾을 때마다 순서를 바꿔주어야 함.
+    - k-mer를 알파벳 순서로 sorting 하는 경우, 새로운 k-mer를 list에 넣을 때마다 순서를 바꿔주어야 함.
     - 모든 k-mer를 미리 알파벳 순서로 만들어두는 경우, k 길이가 길어질수록 메모리 사용이 기하급수적으로 늘어남.
     - hashing을 이용할 경우 메모리 사용을 줄이면서도 모든 k-mer를 만들어두는 것과 비슷한 효과를 볼 수 있음.
   
