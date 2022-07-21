@@ -33,8 +33,8 @@
 
 - 총 9속, 11489개 유전체 데이터 수집
 - _Streptococcus_ 는 16,000개 이상의 genome data 중 representative genome과 _S.thermophilus_ genome만을 수집
-- 수집한 genome 중 _Enterococcus_ 가 5863개로 50% 이상을 차지했음
-- _E.facalis_ 와 _E.faecium_ 이 19종 중 가장 높은 비율을 차지했음
+- 속 단위에서 수집한 genome 중 _Enterococcus_ 가 5863개로 50% 이상을 차지했음
+- 종 단위에서 _E.facalis_ 와 _E.faecium_ 이 19종 중 가장 높은 비율을 차지했음
   
 <br/><br/>  
   
