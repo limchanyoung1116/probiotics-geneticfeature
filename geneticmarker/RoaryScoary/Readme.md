@@ -93,4 +93,7 @@ Probiotics Scoary data/result
 - hypothetical protein
   - hypothetical protein은 어떤 기능을 하는지, 실제로 발현이 되는지 밝혀지지 않은 protein임.
   - 1,739개의 gene중 10%를 넘는 238개의 gene이 hypothetical protein을 coding하는 gene임.
-- CRISPER associated endonuclease
+- CRISPER associated endonuclease family
+  - Cas6, Cas2, Csm2, Csm3, Csm4, Csm5 여섯 개의 CRISPER associated protein이 발견.
+  - 세균에 들어온 외부 유전자와 같은 특정 염기서열들을 절단하기 위한 protein
+  - 같은 _Streptococcus_ 인데 _S. thermophlius_ 만이 다른  갖는 이유?
