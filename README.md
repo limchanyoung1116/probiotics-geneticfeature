@@ -203,4 +203,4 @@
 
   - 총 1,735개의 genome을 포함하는 non-redundent genome set을 속별로 분류하여 제작.
   - /espeon/analysis1/cylim/seqfiles/grouped/
-  - [non redundent set 제작 알고리즘](
+  - [non redundent set 제작 알고리즘](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/makeset)
