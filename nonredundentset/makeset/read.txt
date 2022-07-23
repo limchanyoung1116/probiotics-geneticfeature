@@ -1,0 +1,9 @@
+leiden algorithm in 'igraph' package
+
+identity >= 0.995 become 1
+identity << 0.995 become 0
+
+exclude self edge, other options default
+
+Bifidobacterium : ANIm
+other 5 species : ANIb
