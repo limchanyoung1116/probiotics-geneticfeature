@@ -182,6 +182,7 @@
  - Pyani output을 서로간의 identity 점수에 따라 몇 개의 group으로 나누기 위해 network clustering algorithm을 이용
  - 많은 알고리즘들 중 Leiden, Louvain, MCL을 선택
  - Cut off를 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999 7가지로 잡고 진행. 
+
 <br/>
 
 #### 결과
@@ -190,3 +191,16 @@
  - MCL은 길찾기 기반 알고리즘이기 때문에, 전체 유전체 수에 비해 너무 흩어진 경우 제대로 된 결과를 내지 못하는 것으로 보임
  - 예상과는 달리, cut off 0.995 에서도 grouping을 통해 genome수를 절반 이하로 줄일 수 있음
  - 0.99, 0.995, 0.999중 하나를 cut off로 정하기로 함.
+  - 0.995를 최종 cut off로 결정.
+
+### 5-3. Remove redundent genome
+<br/>
+
+||Bifidobacterium|Lactococcus|Lacticaseibacillus|Limosilactobacillus|Lactiplantibacillus|Ligilactobacillus|
+|---|---|---|---|---|---|---|
+|number of genomes|920|163|129|250|130|144|
+<br/>
+
+  - 총 1,735개의 genome을 포함하는 non-redundent genome set을 속별로 분류하여 제작.
+  - /espeon/analysis1/cylim/seqfiles/grouped/
+  - [non redundent set 제작 알고리즘](
