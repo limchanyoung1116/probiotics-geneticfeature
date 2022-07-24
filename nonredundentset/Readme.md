@@ -4,25 +4,25 @@ Pyani/clustering
 
 #### 1. Pyani란?
 
-  - Genome들 사이의 ANI(Average Nucleotide Identity)를 비교해주는 프로그램.
+  - Genome들 사이의 ANI(Average Nucleotide Identity)를 비교해주는 프로그램
   - ANI란?
-    - 두 genome들의 Nucleotide 서열 일치도.
+    - 두 genome들의 Nucleotide 서열 일치도
     - genome A와 B 사이의 ANI 점수가 0.98이면, 98%의 Nucleotide 서열이 일치함을 뜻함
-    - 서열 일치도를 판단할 때에는 blastn, murmur 등 기존의 서열 비교 프로그램이 주로 사용됨.
+    - 서열 일치도를 판단할 때에는 blastn, murmur 등 기존의 서열 비교 프로그램이 주로 사용됨
   - ANI의 방향성
-    - Genome의 서열 전체를 1대1로 비교하려면 오래 걸리기 때문에 한 서열을 일정 단위로 잘라서 비교.
-    - ANI A->B와 ANI B->A 점수가 서로 다르게 나올 수 있음.
+    - Genome의 서열 전체를 1대1로 비교하려면 오래 걸리기 때문에 한 서열을 일정 단위로 잘라서 비교
+    - ANI A->B와 ANI B->A 점수가 서로 다르게 나올 수 있음
 
 #### 2. Pyani set
 
   - 9속 중에서 이미 representative genome만을 남긴 _Streptococcus_, _Enterococcus_ 를 제외한 7속에 대해 속 단위로 진행
   - Genome 수 1000개를 기준으로 blastn과 murmur를 선택
-    - Blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음.
-    - Murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음.
+    - Blastn은 시간이 비교적 오래걸리는 대신 정확도가 비교적 높음
+    - Murmur는 시간이 비교적 적게걸리는 대신 정확도가 비교적 낮음
   - Blastn 선택 genome
     - _Ligilactobacillus_, _Lactococcus_, _Lacticaseibacillus_, _Limosilactobacillus_, _Lactiplantibacillus_ 5속
   - Burmur 선택 genome
-    - Lactobacillus, Bifidobacterium, 2속
+    - _Lactobacillus, Bifidobacterium_ 2속
 
 #### 3. Pyani command
 
@@ -43,8 +43,8 @@ Pyani/clustering
     - 행렬을 바꿔 정렬하거나, 더 고해상도의 이미지를 얻거나, identity에 따른 색깔 옵션을 바꾸려면 표를 이용한 가공이 필요
     - tab으로 열을 나누고 enter로 행을 나눈, .tab format의 표를 R의 Pheatmap을 통해 시각화
   - Pheatmap이란? - [documentation](https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap)
-    - heatmap은 주어진 table을 점수에 따라 색깔로 시각화하는 방식임.
-    - Pheatmap은 heatmap을 그려주고 유사도에 따라 추정되는 계통도를 그려주는 R의 library임.
+    - heatmap은 주어진 table을 점수에 따라 색깔로 시각화하는 방식임
+    - Pheatmap은 heatmap을 그려주고 유사도에 따라 추정되는 계통도를 그려주는 R의 library임
   - Pheatmap command
     - library("pheatmap")으로 불러오기
     - pheatmap(AVIDEN) 으로 pheatmap 그리기
@@ -59,18 +59,18 @@ Pyani/clustering
 ## Clustering
 
 #### 1. Network clustering 알고리즘들
-  - Network clustering은 그래프 이론에서 다루는 분야이다.
-  - 그래프에서 각 요소는 node, 요소 사이 관계를 나타내는 선은 edge이다.
-  - Network clustering은, 그래프의 node들을 edge의 밀도를 기준으로 여러 그룹으로 나누는 과정이다.
-    - 그룹 내에서는 edge의 밀도가 높고, 그룹 외에서는 edge의 밀도가 낮다.
-  - [논문 조사](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4938516/)결과, clustering 알고리즘을 특징을 통해 분류할 수 있었다.
+  - Network clustering은 그래프 이론에서 다루는 분야이다
+  - 그래프에서 각 요소는 node, 요소 사이 관계를 나타내는 선은 edge이다
+  - Network clustering은, 그래프의 node들을 edge의 밀도를 기준으로 여러 그룹으로 나누는 과정이다
+    - 그룹 내에서는 edge의 밀도가 높고, 그룹 외에서는 edge의 밀도가 낮다
+  - [논문 조사](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4938516/)결과, clustering 알고리즘을 특징을 통해 분류할 수 있었다
   - 지역조사 알고리즘
-    - Louvain, SLM(smart local moving)은 좁은 지역에서 점점 넓은 지역으로 조사 범위를 넓히는 식으로 clustering을 진행한다.
+    - Louvain, SLM(smart local moving)은 좁은 지역에서 점점 넓은 지역으로 조사 범위를 넓히는 식으로 clustering을 진행한다
   - 길찾기 알고리즘
-    - Infomap, MCL(Markov Cluster algorithm)은 특정 node에서 다른 node로 가는 edge를 탐색한다.
-    - 2번의 시행 내로 자신에게 돌아올 확률을 통해, 다른 node들과 가장 많이 연결된 중심 node를 찾고 이를 중심으로 clustering 한다.
+    - Infomap, MCL(Markov Cluster algorithm)은 특정 node에서 다른 node로 가는 edge를 탐색한다
+    - 2번의 시행 내로 자신에게 돌아올 확률을 통해, 다른 node들과 가장 많이 연결된 중심 node를 찾고 이를 중심으로 clustering 한다
   - 선택한 알고리즘
-    - 지역조사 알고리즘중 가장 대표적인 Louvain, 가장 진보된 Leiden을 선택했고 길찾기 알고리즘중 가장 대표적인 MCL을 선택했다.
+    - 지역조사 알고리즘중 가장 대표적인 Louvain, 가장 진보된 Leiden을 선택했고 길찾기 알고리즘중 가장 대표적인 MCL을 선택했다
 
 #### 2. Clustering 결과
 <br/>
@@ -104,18 +104,18 @@ Pyani/clustering
  1) count한 group 수
  <br/>
   
-  - Leiden과 Louvain은 모든 set에서 완전히 같은 결과를 나타냈다.
-  - MCL은 다른 둘과 비슷한 결과를 나타냈지만 일부 set에서 1~2씩 차이가 있었다.
-  - MCL은 몇몇 set에서 결과를 내지 못했다.
-  - MCL은 길찾기 알고리즘을 기반으로 중심 node를 찾으면서 clustering을 하는 알고리즘이다.
-  - 이는 수학적으로는 edge를 통한 node 이동을 상태 변화확률로 표시한 행렬로 구현할 수 있다.
-  - 따라서 edge수가 node에 비해 너무 적을 경우 알고리즘이 제대로 작동하지 않는 것으로 추정된다.
+  - Leiden과 Louvain은 모든 set에서 완전히 같은 결과를 나타냈다
+  - MCL은 다른 둘과 비슷한 결과를 나타냈지만 일부 set에서 1~2씩 차이가 있었다
+  - MCL은 몇몇 set에서 결과를 내지 못했다
+  - MCL은 길찾기 알고리즘을 기반으로 중심 node를 찾으면서 clustering을 하는 알고리즘이다
+  - 이는 수학적으로는 edge를 통한 node 이동을 상태 변화확률로 표시한 행렬로 구현할 수 있다
+  - 따라서 edge수가 node에 비해 너무 적을 경우 알고리즘이 제대로 작동하지 않는 것으로 추정된다
 <br/>
  2) cut off에 따른 group 수
  <br/>
   
-  - 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999를 기준으로 7번씩 group을 만들었다.
-  - cut off가 낮을수록 genome 수를 많이 줄일 수 있지만 신뢰도가 떨어지게 된다.
+  - 0.95, 0.96, 0.97, 0.98, 0.99, 0.995, 0.999를 기준으로 7번씩 group을 만들었다
+  - cut off가 낮을수록 genome 수를 많이 줄일 수 있지만 신뢰도가 떨어지게 된다
   - cut off가 높아질수록 group 수도 당연히 많아졌다.
-  - 예상과는 다르게, cut off를 0.999로 잡더라도 genome 수의 절반 이하의 group만이 남았다.
-  - 따라서 cut off를 0.99이상으로 잡아서 신뢰도에 중점을 두더라도 많은 genome을 줄일 수 있음이 확인되었다.
+  - 예상과는 다르게, cut off를 0.999로 잡더라도 genome 수의 절반 이하의 group만이 남았다
+  - 따라서 cut off를 0.99이상으로 잡아서 신뢰도에 중점을 두더라도 많은 genome을 줄일 수 있음이 확인되었다
