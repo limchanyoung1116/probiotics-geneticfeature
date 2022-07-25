@@ -197,7 +197,7 @@
 ### 5-3. Remove redundent genome
 <br/>
 
-||Bifidobacterium|Lactococcus|Lacticaseibacillus|Limosilactobacillus|Lactiplantibacillus|Ligilactobacillus|
+||_Bifidobacterium_|_Lactococcus_|_Lacticaseibacillus_|_Limosilactobacillus_|_Lactiplantibacillus_|_Ligilactobacillus_|
 |---|---|---|---|---|---|---|
 |number of all genomes in genus|1554|412|505|510|767|373|
 |size of non-redundent set|920|163|129|250|130|144|
