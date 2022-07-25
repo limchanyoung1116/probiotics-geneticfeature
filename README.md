@@ -1,4 +1,4 @@
-유산균만이 갖는 특징적인 유전자 영역 찾기(가제)-
+특정 pyrogenetic group이 갖는 genome 상의 marker 
 ============================
 목차
 ----------------------------
@@ -18,7 +18,7 @@
 #### 4-1. 탐색 도구 비교
 #### 4-2. Tool : Neptune
 #### 4-3. Tool : Scoary/Roary
-<br/
+<br/>
 
 ### 5. Non redundant genome set 제작
 #### 5-1. Tool : Pyani
@@ -29,7 +29,7 @@
 1. 건강에 대한 사회적 관심이 증가하면서 건강기능식품의 소비가 증가
     - 유산균에 대한 수요도 증가하면서 이를 활용한 제품들이 다양하게 출시됨
     - 유산균 제품에 실제로 해당 유산균이 존재하는지 쉽고 빠르게 확인가능한 marker
-2. Probiotics만이 갖는, 다른 세균들과는 다른 특징적인 유전자 영역 찾기
+2. Probiotics의 특정 group 만이 갖는, 다른 세균들과는 다른 특징적인 유전자 영역 찾기
 
 ***
 - 식약처 고시형 균주인 9속 19종 probiotics를 target으로 함
@@ -45,7 +45,7 @@
 
 1. 식약처 고시형 균주 19종이 속해있는 9속의 bacteria들의 유전체 데이터 수집  
 2. 총 9속에 대해서 NCBI taxid를 기준으로 함  
-    - _S. thermophilus를 제외한 8속의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
+    - _S. thermophilus_ 를 제외한 8속의 하위로 포함되어 있는 모든 species, subspecies 유전체 수집     
     - _Streptococcus_ 에 대해서는 고시형 균주에 속하는 _S. thermophilus_ 만 모든 유전체를 수집
     - 다른 _Streptococcus_ species들은 representative genome만 수집
 
@@ -89,7 +89,7 @@
 <br/>
 
 2. Phenotypeseeker 결과
-  - marker로서 기능할 수 있는 unique한 k-mer를 찾는 것이므로, k 길이를 24로 길게 설정
+  - arker로서 기능할 수 있는 unique한 k-mer를 찾는 것이므로, k 길이를 24로 길게 설정
   - k값이 커지면, 거의 모든 sequence가 한 번씩만 등장하게 됨
     - genome이 적으면 p-value가 커져 조건을 만족하는 k-mer의 수가 줄어듬
     - genome이 많으면 Phenotype 1에선 모두 존재하고 0에선 존재하지 않는 k-mer의 수가 줄어듬
@@ -133,7 +133,7 @@
   - 같은 속의 genome 100개, k = 23까지는 결과가 출력되었으나 genome 400개, k = 23 부터는 결과가 출력되지 않음
 <br/>
 
-3. IGV mapping
+3. IGV visualization
   - [IGV(Integraged genome viewer) article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3346182/)
   - IGV는 genome 상에 mapping된 sequence나 gene을 시각화해 주는 tool임
   - Toyset1 output mapping 결과
@@ -199,8 +199,8 @@
 
 ||Bifidobacterium|Lactococcus|Lacticaseibacillus|Limosilactobacillus|Lactiplantibacillus|Ligilactobacillus|
 |---|---|---|---|---|---|---|
-|size of non-redundent set|920|163|129|250|130|144|
 |number of all genomes in genus|1554|412|505|510|767|373|
+|size of non-redundent set|920|163|129|250|130|144|
 |percentage of non-redundent genome in genus|59%|40%|31%|49%|17%|39%|
 <br/>
   
