@@ -197,11 +197,11 @@
 ### 5-3. Remove redundent genome
 <br/>
 
-||_Bifidobacterium_|_Lactococcus_|_Lacticaseibacillus_|_Limosilactobacillus_|_Lactiplantibacillus_|_Ligilactobacillus_|
-|---|---|---|---|---|---|---|
-|number of all genomes in genus|1554|412|505|510|767|373|
-|size of non-redundent set|920|163|129|250|130|144|
-|percentage of non-redundent genome in genus|59%|40%|31%|49%|17%|39%|
+||_Bifidobacterium_|_Lactococcus_|_Lacticaseibacillus_|_Limosilactobacillus_|_Lactiplantibacillus_|_Ligilactobacillus_|_Lactobacillus_|
+|---|---|---|---|---|---|---|---|
+|number of all genomes in genus|1554|412|505|510|767|373|1203|
+|size of non-redundent set|920|163|129|250|130|144|344|
+|percentage of non-redundent genome in genus|59%|40%|31%|49%|17%|39%|29%|
 <br/>
   
   - Leiden algorithm in igraph package, 0.995 threshold, exclude self edge, other settings default
