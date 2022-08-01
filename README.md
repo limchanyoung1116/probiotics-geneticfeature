@@ -206,5 +206,5 @@
   
   - Leiden algorithm in igraph package, 0.995 threshold, exclude self edge, other settings default
   - 총 1,735개의 genome을 포함하는 non-redundent genome set을 속별로 분류하여 제작.
-  - /espeon/analysis1/cylim/seqfiles/grouped/
+  - 다운로드 위치 - /espeon/analysis1/cylim/seqfiles/grouped/
   - [non redundent set 제작 알고리즘](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/makeset)
