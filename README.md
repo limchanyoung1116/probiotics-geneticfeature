@@ -172,9 +172,9 @@
 
 ### 5-1. Tool : Pyani
  - Pyani는 주어진 genome들 사이의 ANI(Average Nucleotide Identity) score를 비교하여 표로 만들어주는 프로그램
- - 수집한 9속의 genome중, 이미 representative로 압축된 Streptococcus를 제외한 8속에 대해 속별로 pyani 진행
+ - 수집한 9속의 genome중, 이미 representative로 압축된 _Streptococcus_ 와 _Enterococcus_ 를 제외한 7속에 대해 속별로 pyani 진행
  - Pyani의 output을 시각화하는 방법으로 R의 pheatmap package를 선택
- - Pheatmap은 2차원 표에서 색깔의 차이로 genome들 사이의 identity 점수를 시각화해주고, 추정되는 계통도를 각 변에 그려줌
+ - Pheatmap은 2차원 표에서 색깔의 차이로 genome들 사이의 identity 점수를 시각화해주고, 추정되는 계통도를 그려줌
  - [Pyani output data page](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/Pyani)
  <br/>
  
@@ -189,22 +189,27 @@
 #### 결과
  - 세 알고리즘 모두 비슷한 수와 형태의 grouping을 보여줌
  - MCL은 identity 점수 cut off가 높을 때(0.98이상), 종종 결과를 내지 못함
- - MCL은 길찾기 기반 알고리즘이기 때문에, 전체 유전체 수에 비해 너무 흩어진 경우 제대로 된 결과를 내지 못하는 것으로 보임
- - 예상과는 달리, cut off 0.995 에서도 grouping을 통해 genome수를 절반 이하로 줄일 수 있음
+ - MCL은 변화 확률 기반 알고리즘이기 때문에, 전체 유전체 수에 비해 너무 흩어진 경우 제대로 된 결과를 내지 못하는 것으로 보임
+ - cut off 0.995 에서도 grouping을 통해 genome수를 절반 이하로 줄일 수 있음
  - 0.99, 0.995, 0.999중 하나를 cut off로 정하기로 함
   - 0.995를 최종 cut off로 결정.
 
 ### 5-3. Remove redundent genome
 <br/>
 
-||_Bifidobacterium_|_Lactococcus_|_Lacticaseibacillus_|_Limosilactobacillus_|_Lactiplantibacillus_|_Ligilactobacillus_|_Lactobacillus_|
-|---|---|---|---|---|---|---|---|
-|number of all genomes in genus|1554|412|505|510|767|373|1203|
-|size of non-redundent set|920|163|129|250|130|144|344|
-|percentage of non-redundent genome in genus|59%|40%|31%|49%|17%|39%|29%|
+|genus|number of all genomes in genus|size of non-redundent set|percentage of non-redundent genome in genus|number of species in gunus|(n. of species)/(set size)|
+|---|---|---|---|---|---|
+|_Bifidobacterium_|1554|920|59%|105|11%|
+|_Lactococcus_|412|163|40%|27|17%|
+|_Lacticaseibacillus_|505|129|31%|29|22%|
+|_Limosilactobacillus_|510|250|49%|37|15%|
+|_Lactiplantibacillus_|767|130|17%|20|15%|
+|_Ligilactobacillus_|373|144|39%|24|17%|
+|_Lactobacillus_|1203|344|29%|70|20%|
 <br/>
   
   - Leiden algorithm in igraph package, 0.995 threshold, exclude self edge, other settings default
   - 총 1,735개의 genome을 포함하는 non-redundent genome set을 속별로 분류하여 제작.
   - 다운로드 위치 - /espeon/analysis1/cylim/seqfiles/grouped/
   - [non redundent set 제작 알고리즘](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/nonredundentset/makeset)
+  - Non-redundent set의 크기는 해당 속에 속한 species의 수와 양의 상관관계를 보임.
