@@ -151,4 +151,24 @@ Neptune
   - BEDTools output .gff file의 gene들을 clustering 하는 알고리즘
     - 일정 bp 내에 있는 gene들을 하나의 cluster로 묶는다
     - 알고리즘과 input/output 
-      - [data set](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune/IGVfiles/clustering)
+      - [data set](https://github.com/limchanyoung1116/probiotics-geneticfeature/tree/main/geneticmarker/Neptune/IGVfiles/clustering)      
+<br/>
+
+6. Neptune lacto15 set
+
+1) dataset/method
+  - 15개의 genome에 대해 inclusion genome 1개, exclusion genome 14개로 15번 반복 수행
+
+2) parameter
+  - try1) k = 22, other options default => no output
+  - try2) k = 19, size = 57(default=76) other options default => no output
+  - try3) k = 16, filter = 0.6(default=0.5) length = 0.6(default=0.5) => no output
+  - try4) k = 13, filter = 0.6(default=0.5) length = 0.6(default=0.5)
+  - try5) k = 13, filter = 0.7(default=0.5) length = 0.7(default=0.5)
+  
+3-1) try4 output
+
+|genome|number of sequence|average length|average score|max length|min length|score > 0.5|
+|---|---|---|---|---|---|---|
+|SRP423|
+
